@@ -1,0 +1,75 @@
+# PM GitHub Workflow .gitignore
+
+# SECRETS
+.env
+.env.*
+*.key
+*.pem
+api-keys.md
+secrets/
+
+# OS FILES
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# NODE / NPM
+node_modules/
+package-lock.json
+yarn.lock
+bun.lockb
+
+# PYTHON
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# LARGE DATA FILES
+*.csv
+*.xlsx
+*.xls
+data/raw/
+exports/
+recordings/
+transcripts/raw/
+*.mp3
+*.mp4
+*.wav
+*.m4a
+*.mov
+*.zip
+*.tar.gz
+
+# CLAUDE CODE
+.claude/settings.local.json
+.claude/statsig/
+
+# IDE FILES
+.vscode/
+.cursor/
+.idea/
+*.code-workspace
+
+# BUILD ARTIFACTS
+dist/
+build/
+out/
+*.log
+.next/
+.vercel/
+
+# PM-SPECIFIC
+*.otter
+*.granola
+drafts/wip/
+scratch/
+screenshots/
+screen-recordings/
+
+# ENTERPRISE NOTE
+# Add regulated document types here
+# Consider CODEOWNERS for review requirements
+# NDA materials should NEVER be in any repo
