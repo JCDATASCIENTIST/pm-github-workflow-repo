@@ -16,7 +16,9 @@ Review the provided PRD against the checklist below. For each item, output PASS 
    FAIL: "We will build a calendar integration."
    PASS: "Calendar integration will reduce scheduling tickets by 20% within 8 weeks."
 2. **Success metrics listed.** The PRD names the metrics that matter.
-3. **Scope defined.** The PRD says what is included.
+3. **Non-goals section exists and is specific.**
+   FAIL: No non-goals section.
+   PASS: "Non-goal: Outlook integration. V1 covers Google Calendar only."
 4. **Risks identified.** The PRD lists what could go wrong.
 5. **Rollout plan with ramp gates.**
    FAIL: "Ship to all users."
