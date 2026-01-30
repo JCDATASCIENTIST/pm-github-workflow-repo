@@ -19,7 +19,9 @@ Review the provided PRD against the checklist below. For each item, output PASS 
 3. **Non-goals section exists and is specific.**
    FAIL: No non-goals section.
    PASS: "Non-goal: Outlook integration. V1 covers Google Calendar only."
-4. **Risks identified.** The PRD lists what could go wrong.
+4. **Kill criteria defined.**
+   FAIL: No kill criteria section.
+   PASS: "Roll back if support tickets increase by more than 5% in first 2 weeks."
 5. **Rollout plan with ramp gates.**
    FAIL: "Ship to all users."
    PASS: "10% of users for 2 weeks, 50% if metrics hold, then 100%."
