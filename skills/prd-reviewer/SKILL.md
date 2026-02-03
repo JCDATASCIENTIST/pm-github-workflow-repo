@@ -15,7 +15,9 @@ Review the provided PRD against the checklist below. For each item, output PASS 
 1. **Hypothesis present and testable.**
    FAIL: "We will build a calendar integration."
    PASS: "Calendar integration will reduce scheduling tickets by 20% within 8 weeks."
-2. **Success metrics listed.** The PRD names the metrics that matter.
+2. **Success metrics have numeric thresholds.**
+   FAIL: "Measure user engagement."
+   PASS: "DAU increases by 12% vs control group over 4 weeks."
 3. **Non-goals section exists and is specific.**
    FAIL: No non-goals section.
    PASS: "Non-goal: Outlook integration. V1 covers Google Calendar only."
