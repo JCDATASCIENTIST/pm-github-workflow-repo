@@ -27,3 +27,15 @@ Review the provided PRD against the checklist below. For each item, output PASS 
 5. **Rollout plan with ramp gates.**
    FAIL: "Ship to all users."
    PASS: "10% of users for 2 weeks, 50% if metrics hold, then 100%."
+
+## AI Feature Criteria (check only for AI-powered features)
+
+6. **Behavior contract with examples.**
+   5+ input/output examples showing expected behavior, including 2+ edge cases.
+   FAIL: "The AI should respond helpfully."
+   PASS: Three user queries with expected responses, one ambiguous input with fallback, one adversarial input with refusal.
+
+7. **Eval criteria defined.**
+   Binary scoring criteria for measuring output quality offline.
+   FAIL: "We'll evaluate quality manually."
+   PASS: "3 criteria: resolves without escalation, references only knowledge base, resolves in under 3 messages. Target: 0.80."
