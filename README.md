@@ -1,6 +1,6 @@
 # PM GitHub Workflow Repo
 
-**Practice repo from [GitHub for PMs: Version Control for Everything You Build With AI](link-newsletter).**
+**Practice repo from [GitHub for PMs: Version Control for Everything You Build With AI](https://www.news.aakashg.com/).**
 
 Fork it, customize it, use it.
 
@@ -63,7 +63,7 @@ cd ~/your-pm-os-folder
 git init && git add . && git commit -m "initial commit: existing PM OS setup"
 ```
 
-Push to GitHub. Done. The [Team OS](link-internal-team-os) `/upgrade-to-team-os` command assumes your PM OS is already in a git repo.
+Push to GitHub. Done. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) `/upgrade-to-team-os` command assumes your PM OS is already in a git repo.
 
 ## The Exercise
 
@@ -76,8 +76,8 @@ Push to GitHub. Done. The [Team OS](link-internal-team-os) `/upgrade-to-team-os`
 
 ## Related
 
-- [PM OS](link-internal-pm-os) · [Team OS](link-internal-team-os) · [CLAUDE.md Deep Dive](link-internal-claudemd-deep-dive)
-- [Experimentation](link-internal-experimentation) · [Ship Your First PR](https://www.news.aakashg.com/p/pm-guide-ship-production)
+- [PM OS](https://www.news.aakashg.com/p/pm-os) · [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) · [Claude Skills](https://www.news.aakashg.com/p/10-laws-claude-skills)
+- [Experimentation: Evals are the new PRD](https://www.news.aakashg.com/p/ankur-goyal-podcast) · [Autoresearch Guide](https://www.aibyaakash.com/p/autoresearch-guide) · [Ship Your First PR](https://www.news.aakashg.com/p/pm-guide-ship-production)
 - [Hannah's GitHub 101](https://hannahstulberg.substack.com/p/tool-school-github-101)
 
 MIT License. Fork it. Make it yours.

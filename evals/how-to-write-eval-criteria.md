@@ -61,4 +61,4 @@ Why: [one line]
 4. Overall = average (0.00 to 1.00).
 ```
 
-For the full eval methodology, see [Experimentation](link-internal-experimentation) and [Hamel deep dive](link-internal-hamel-deep-dive).
+For the full eval methodology, see [Experimentation: Evals are the new PRD](https://www.news.aakashg.com/p/ankur-goyal-podcast).

@@ -71,4 +71,4 @@ Monthly: `git diff HEAD~20 CLAUDE.md` to prune.
 
 ---
 
-*From [GitHub for PMs](link-newsletter) · [PM OS](link-internal-pm-os) · [Team OS](link-internal-team-os)*
+*From [GitHub for PMs](https://www.news.aakashg.com/) · [PM OS](https://www.news.aakashg.com/p/pm-os) · [Team OS](https://www.news.aakashg.com/p/claude-code-team-os)*
