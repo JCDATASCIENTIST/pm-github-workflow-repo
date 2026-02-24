@@ -1,9 +1,9 @@
 # Eval Scoring Criteria: Support Chatbot
 
 **Feature:** AI support chatbot for billing questions
-**Owner:** [PM NAME]
-**Last reviewed:** [DATE]
-**Baseline:** [X.XX]
+**Owner:** Priya N. (Support PM)
+**Last reviewed:** 2026-03-03
+**Baseline:** 0.71 (first run, 20 questions, 2026-03-03)
 **Target:** 0.80
 **Kill threshold:** below 0.60, escalate to engineering
 
