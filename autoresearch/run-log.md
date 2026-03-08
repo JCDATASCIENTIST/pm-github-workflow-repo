@@ -6,3 +6,4 @@ Started 2026-04-21 02:14 · 25 sample inputs · commit-on-improve, revert-on-dro
 | Round | Change | Score | Verdict |
 |---|---|---|---|
 | seed | v0 prompt ("make it exciting") | 41% | baseline |
+| 1 | require at least one concrete number | 68% | ✅ committed |
