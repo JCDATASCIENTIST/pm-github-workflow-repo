@@ -6,7 +6,6 @@ Requirements:
 - Include at least one concrete number (a before/after, a limit, a time saved). No vague claims of "faster" or "better" without a number.
 - Do not use any of these words: revolutionary, seamless, game-changing, cutting-edge, robust, leverage, synergy, delight, unlock, supercharge.
 - Lead with who it's for and what they can now do.
-- Keep it under 80 words.
 
 ## Worked example
 
