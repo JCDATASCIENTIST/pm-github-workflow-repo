@@ -9,3 +9,4 @@ Started 2026-04-21 02:14 · 25 sample inputs · commit-on-improve, revert-on-dro
 | 1 | require at least one concrete number | 68% | ✅ committed |
 | 2 | ban buzzword list | 79% | ✅ committed |
 | 3 | add a worked before/after example | 90% | ✅ committed |
+| 4 | cap output at 80 words | 82% | ❌ reverted |
