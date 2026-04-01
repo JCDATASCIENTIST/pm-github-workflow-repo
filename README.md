@@ -18,7 +18,7 @@ cd pm-github-workflow-repo
 ```bash
 git log --oneline
 ```
-10 commits showing a PRD reviewer skill evolving v1 to v7, a CLAUDE.md growing, and eval criteria being tightened.
+The history is the lesson. A PRD reviewer skill evolving v1 → v7, a CLAUDE.md growing, eval criteria tightening across dated commits, and a full autoresearch run (41% → 90%, with one failed experiment reverted).
 
 **4. Open in Claude Code.**
 ```bash
@@ -34,8 +34,12 @@ claude
 │   ├── competitor-scan/SKILL.md           ← Competitor analysis
 │   └── feedback-synthesizer/SKILL.md      ← User feedback synthesis
 ├── evals/
-│   ├── support-chatbot-criteria.md        ← Worked eval example
+│   ├── support-chatbot-criteria.md        ← Worked eval, versioned in git
 │   └── how-to-write-eval-criteria.md      ← Write your own
+├── autoresearch/                          ← Sample optimization run (read the git log)
+│   ├── launch-announcement-writer.md      ← The prompt the loop optimized
+│   ├── eval-criteria.md                   ← What it scored against
+│   └── run-log.md                         ← 41% → 90%, one reverted experiment
 ├── examples/
 │   ├── claude-md-filled-example.md        ← Filled-in CLAUDE.md
 │   ├── project-level-claude-md.md         ← Project-specific CLAUDE.md
@@ -43,6 +47,7 @@ claude
 ├── docs/
 │   └── which-repo-decision-guide.md       ← Printable decision guide
 ├── .gitignore                             ← PM-configured
+├── LICENSE                                ← MIT
 └── CONTRIBUTING.md                        ← PR templates
 ```
 
@@ -52,9 +57,9 @@ claude
 
 **2. CLAUDE.md Pruning:** `git log --oneline -- CLAUDE.md`
 
-**3. Autoresearch Tracking:** Scores in commit messages show what the loop discovered.
+**3. Autoresearch Tracking:** `git log --oneline -- autoresearch/` — scores in the commit messages show what the loop discovered, including the experiment it reverted.
 
-**4. Eval Versioning:** `git log --oneline -- evals/`
+**4. Eval Versioning:** `git log --oneline -- evals/support-chatbot-criteria.md` — baseline → new criterion → raised target, each dated.
 
 ## Coming From PM OS?
 
