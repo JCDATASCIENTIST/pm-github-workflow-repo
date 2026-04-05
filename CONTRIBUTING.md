@@ -53,4 +53,4 @@ Fork and customize for your workflow. You can also contribute improvements back.
 |---|---|
 | `prd-reviewer v6: require metric thresholds` | `update` |
 | `evals: tighten resolution from 5 to 3 messages` | `fix` |
-| `round 3 - add CTA example (score: 79% → 90%)` | `wip` |
+| `round 3 - add worked before/after example (score: 79% -> 90%)` | `wip` |

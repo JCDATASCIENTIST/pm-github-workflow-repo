@@ -43,4 +43,5 @@
 - Marcus Rivera: VP Product (my manager). Wants metrics in every update.
 
 ---
-*34 lines. Well under 200. David/Sarah/Marcus sections help Claude draft messages.*
+*Well under 200 lines. The Key People section helps Claude draft messages in the right register.*
+*To reuse: copy everything between the two `---` dividers above into your own `CLAUDE.md` — not this title or footer — and swap in your details.*

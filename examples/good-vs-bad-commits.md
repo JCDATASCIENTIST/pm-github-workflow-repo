@@ -22,11 +22,14 @@ competitor-scan: add G2/Capterra check
 
 ## For Autoresearch Runs (include the score)
 
+These are the *actual* commits from this repo's `autoresearch/` run — run `git log --oneline -- autoresearch/` to confirm they match (use ASCII `->`, since git messages aren't Unicode):
+
 ```
-round 1 - require concrete numbers (score: 41% → 68%)
-round 2 - ban buzzword list (score: 68% → 79%)
-round 3 - add worked CTA example (score: 79% → 90%)
-round 4 - tighten word count [REVERTED, score dropped to 82%]
+round 1 - require concrete numbers (score: 41% -> 68%)
+round 2 - ban buzzword list (score: 68% -> 79%)
+round 3 - add worked before/after example (score: 79% -> 90%)
+round 4 - cap at 80 words [EXPERIMENT] (score: 90% -> 82%)
+round 5 - revert word-count cap (82% -> 90%, restored best)
 ```
 
 ## The Pattern

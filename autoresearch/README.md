@@ -18,19 +18,23 @@ When you wake up, the git log *is* the experiment log.
 git log --oneline -- autoresearch/
 ```
 
+You'll see the rounds, newest first (commit hashes on the left will differ in your fork — read the messages):
+
 ```
-round 5 - revert word-count cap (90% -> 82%, dropped concrete detail)
-round 4 - cap at 80 words [EXPERIMENT]
+round 5 - revert word-count cap (82% -> 90%, restored best)
+round 4 - cap at 80 words [EXPERIMENT] (score: 90% -> 82%)
 round 3 - add worked before/after example (score: 79% -> 90%)
 round 2 - ban buzzword list (score: 68% -> 79%)
 round 1 - require concrete numbers (score: 41% -> 68%)
 autoresearch: seed launch-announcement-writer v0 (score: 41%)
 ```
 
-See the full diff of what the loop discovered:
+Read it bottom-up: 41% → 68% → 79% → 90%, then round 4 tries an 80-word cap, drops to 82%, and round 5 reverts it back to the 90% prompt. The failed experiment stays in the log instead of vanishing.
+
+See every change the loop made to the prompt, diff by diff (no hash to copy — this walks the whole file's history):
 
 ```bash
-git diff <seed-commit> HEAD -- autoresearch/launch-announcement-writer.md
+git log -p -- autoresearch/launch-announcement-writer.md
 ```
 
 ## The point

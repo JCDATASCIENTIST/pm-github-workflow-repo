@@ -19,7 +19,7 @@ Started 2026-04-21 02:14 · 25 sample inputs · commit-on-improve, revert-on-dro
 - The single biggest lever was forcing a **concrete number** (+27 points). Vague excitement scored worst.
 - Banning buzzwords removed the easy way to fake enthusiasm without saying anything (+11).
 - A **worked example** in the prompt pulled the model to the target format (+11).
-- Round 4 over-constrained: an 80-word cap forced the model to drop the concrete numbers criterion 1 rewards. The loop caught the drop and reverted automatically. A failed experiment, preserved instead of lost.
+- Round 4 over-constrained. On the longer feature specs, an 80-word budget wasn't enough to fit the before/after framing *and* the concrete numbers, so the model dropped the numbers to stay under the cap — and criterion 1 (at least one concrete number) started failing. Net score fell to 82%. The loop caught the drop and reverted automatically. A failed experiment, preserved in the log instead of lost.
 
 ## What stays a non-goal
 
