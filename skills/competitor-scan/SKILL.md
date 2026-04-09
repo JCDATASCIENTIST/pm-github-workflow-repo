@@ -1,11 +1,6 @@
 ---
 name: competitor-scan
-description: Researches a competitor and produces a structured analysis.
-triggers:
-  - analyze competitor
-  - competitor scan
-  - competitive analysis
-  - research [company name]
+description: Researches a competitor and produces a structured, evidence-backed analysis. Use when asked to "analyze a competitor", "run a competitor scan", do "competitive analysis", or "research [company name]".
 ---
 
 # Competitor Scan

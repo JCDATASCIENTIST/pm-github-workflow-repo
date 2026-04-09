@@ -1,11 +1,6 @@
 ---
 name: feedback-synthesizer
-description: Synthesizes user feedback from multiple sources into actionable themes.
-triggers:
-  - synthesize feedback
-  - analyze user feedback
-  - feedback synthesis
-  - what are users saying
+description: Synthesizes user feedback from multiple sources into ranked, actionable themes. Use when asked to "synthesize feedback", "analyze user feedback", run a "feedback synthesis", or "what are users saying".
 ---
 
 # Feedback Synthesizer
