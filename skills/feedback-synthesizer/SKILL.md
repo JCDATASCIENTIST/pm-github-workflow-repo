@@ -49,7 +49,7 @@ Analyze provided user feedback and produce a structured synthesis. Works with in
 
 **Fewer than 5 sources:** Flag low confidence. Recommend 5+ more before decisions.
 **Contradictory feedback:** Report the split. "Power users (4/8) want more automation, new users (3/8) find existing automation confusing."
-**Pre-PMF:** Focus on problem validation. "7/8 described the problem. Signal is real."
+**Pre-PMF (before product-market fit):** Focus on problem validation, not feature requests. "7/8 described the problem. Signal is real."
 
 ## Rules
 - Never invent quotes. Every quote must come verbatim from sources.
