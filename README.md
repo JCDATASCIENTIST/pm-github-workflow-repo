@@ -4,26 +4,43 @@
 
 Fork it, customize it, use it.
 
-## Quick Start (5 minutes)
+## Before you start (first time only)
+
+If you've never used Git or Claude Code, do this once:
+
+1. **Install Git.** [git-scm.com/downloads](https://git-scm.com/downloads). On Windows, this gives you **Git Bash** — run all commands below in Git Bash, not PowerShell, so the Unix-style commands work.
+2. **Install Claude Code.** [docs.claude.com/claude-code](https://docs.claude.com/en/docs/claude-code/overview).
+3. **Tell Git who you are** (otherwise your first commit aborts with "Author identity unknown"):
+   ```bash
+   git config --global user.name "Your Name"
+   git config --global user.email "you@example.com"
+   ```
+
+New to Git entirely? [Hannah's GitHub 101](https://hannahstulberg.substack.com/p/tool-school-github-101) walks through setup with screenshots.
+
+## Quick Start
 
 **1. Fork.** Click "Fork" in the top right corner.
 
-**2. Clone your fork.**
+**2. Clone your fork.** HTTPS works out of the box — no SSH key needed:
 ```bash
-git clone git@github.com:YOUR-USERNAME/pm-github-workflow-repo.git
+git clone https://github.com/YOUR-USERNAME/pm-github-workflow-repo.git
 cd pm-github-workflow-repo
 ```
+(Prefer SSH? `git clone git@github.com:YOUR-USERNAME/pm-github-workflow-repo.git` — but only if you've already added an SSH key to GitHub.)
 
-**3. Explore the history.**
+**3. Explore the history.** This is the whole point — the history is the lesson:
 ```bash
 git log --oneline
 ```
-The history is the lesson. A PRD reviewer skill evolving v1 → v7, a CLAUDE.md growing, eval criteria tightening across dated commits, and a full autoresearch run (41% → 90%, with one failed experiment reverted).
+A PRD reviewer skill evolving v1 → v7, a CLAUDE.md growing then getting pruned, eval criteria tightening across dated commits, and a full autoresearch run (41% → 90%, with one failed experiment reverted).
 
 **4. Open in Claude Code.**
 ```bash
 claude
 ```
+
+> **Activate the skills:** Claude Code auto-loads skills from `.claude/skills/`. The skills here live in `skills/` so they're easy to read and version. To make Claude use one, copy or symlink it: `mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/`.
 
 ## What's Inside
 
@@ -65,19 +82,23 @@ claude
 
 ```bash
 cd ~/your-pm-os-folder
+cp /path/to/this-repo/.gitignore .   # so you don't commit secrets or raw data
 git init && git add . && git commit -m "initial commit: existing PM OS setup"
 ```
 
-Push to GitHub. Done. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) `/upgrade-to-team-os` command assumes your PM OS is already in a git repo.
+Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. Then push to GitHub. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) `/upgrade-to-team-os` command assumes your PM OS is already in a git repo.
 
 ## The Exercise
 
-1. Fork this repo
-2. Replace CLAUDE.md with your context (see `examples/claude-md-filled-example.md`)
-3. Add one skill to `skills/`
-4. Commit with a descriptive message (see `examples/good-vs-bad-commits.md`)
-5. Push
-6. Open a PR back to this repo
+1. Fork this repo (and clone it — see Quick Start).
+2. Create a branch: `git checkout -b my-customization` (keeps `main` clean and makes the PR reviewable).
+3. Replace `CLAUDE.md` with your context (see `examples/claude-md-filled-example.md`).
+4. Add one skill to `skills/`.
+5. Commit with a descriptive message (see `examples/good-vs-bad-commits.md`).
+6. Push the branch: `git push -u origin my-customization`.
+7. Open a PR back to this repo, using the **Exercise PR Template** in [CONTRIBUTING.md](CONTRIBUTING.md).
+
+It's a PM-artifact PR, not a code PR — that's the point.
 
 ## Related
 
