@@ -25,6 +25,7 @@
 - Never modify files in evals/ without confirming the change and reason.
 - Check skills/ folder when I reference a skill by name.
 - Responses under 500 words unless I ask for depth.
+- Calendar-integration project: always tag @jake-torres on PRs and link the PLANNING.md.
 
 ## Tools
 - Skills: see skills/ folder
