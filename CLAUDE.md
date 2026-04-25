@@ -25,7 +25,6 @@
 - Never modify files in evals/ without confirming the change and reason.
 - Check skills/ folder when I reference a skill by name.
 - Responses under 500 words unless I ask for depth.
-- Calendar-integration project: always tag @jake-torres on PRs and link the PLANNING.md.
 
 ## Tools
 - Skills: see skills/ folder
@@ -33,6 +32,6 @@
 - CLIs: GitHub CLI, [OTHERS]
 
 ---
-*Keep this file under 200 lines. Monthly: run `git diff HEAD~20 CLAUDE.md` to prune.*
-*Project-specific context goes in project-level CLAUDE.md files, not here.*
+*Keep this file under 200 lines. Monthly, review what changed and prune: `git log -p -- CLAUDE.md` (or `git diff HEAD~20 -- CLAUDE.md` once you have 20+ commits — it errors on younger repos).*
+*Project-specific context goes in project-level CLAUDE.md files, not here (the calendar PR rule that briefly lived here is the example — see the prune commit).*
 *On-demand instructions go in skill files, not here.*
