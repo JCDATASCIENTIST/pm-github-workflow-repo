@@ -63,11 +63,11 @@
 ## The Monday Check
 
 ```bash
-cd ~/pm-workspace
+cd ~/pm-workspace        # Windows (Git Bash): cd ~/pm-workspace works too; PowerShell: cd $HOME\pm-workspace
 git log --oneline -10
 ```
 
-Monthly: `git diff HEAD~20 CLAUDE.md` to prune.
+Monthly, review and prune CLAUDE.md: `git log -p -- CLAUDE.md` (works on any repo). Once you have 20+ commits, `git diff HEAD~20 -- CLAUDE.md` shows just the last month's changes.
 
 ---
 

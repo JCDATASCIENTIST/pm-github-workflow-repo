@@ -1,0 +1,2 @@
+# Normalize line endings so Windows checkouts don't introduce CRLF noise in diffs.
+* text=auto eol=lf

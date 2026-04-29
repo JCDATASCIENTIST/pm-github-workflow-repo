@@ -72,7 +72,7 @@ claude
 
 **1. Skill Versioning:** `git log --oneline -- skills/prd-reviewer/SKILL.md`
 
-**2. CLAUDE.md Pruning:** `git log --oneline -- CLAUDE.md`
+**2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out two commits later.
 
 **3. Autoresearch Tracking:** `git log --oneline -- autoresearch/` — scores in the commit messages show what the loop discovered, including the experiment it reverted.
 

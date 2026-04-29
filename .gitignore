@@ -69,6 +69,17 @@ scratch/
 screenshots/
 screen-recordings/
 
+# RESEARCH OUTPUTS (often contain customer PII / verbatim quotes)
+# The skills in this repo save files like feedback-synthesis-2026-06-01.md and
+# competitor-acme-2026-06-01.md. Ignored by default so a transcript full of
+# customer names can't be committed by accident. Sanitized one you DO want to
+# share? Force it in: `git add -f feedback-synthesis-2026-06-01.md`
+feedback-synthesis-*.md
+competitor-*.md
+interviews/
+*transcript*
+data/exports/
+
 # ENTERPRISE NOTE
 # Add regulated document types here
 # Consider CODEOWNERS for review requirements
