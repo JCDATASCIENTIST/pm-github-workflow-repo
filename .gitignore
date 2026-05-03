@@ -46,6 +46,9 @@ transcripts/raw/
 # CLAUDE CODE
 .claude/settings.local.json
 .claude/statsig/
+# Activated skill copies. The source of truth is skills/; .claude/skills/ is a
+# local convenience copy (see README), so it shouldn't be committed twice.
+.claude/skills/
 
 # IDE FILES
 .vscode/
@@ -70,15 +73,19 @@ screenshots/
 screen-recordings/
 
 # RESEARCH OUTPUTS (often contain customer PII / verbatim quotes)
-# The skills in this repo save files like feedback-synthesis-2026-06-01.md and
-# competitor-acme-2026-06-01.md. Ignored by default so a transcript full of
-# customer names can't be committed by accident. Sanitized one you DO want to
-# share? Force it in: `git add -f feedback-synthesis-2026-06-01.md`
-feedback-synthesis-*.md
-competitor-*.md
+# The skills here save dated files like feedback-synthesis-2026-06-01.md and
+# competitor-acme-2026-06-01.md. Patterns are anchored to the DATED form so they
+# only catch generated outputs, never the repo's own source (skills/, evals/).
+# Ignored by default so a transcript full of customer names can't be committed
+# by accident. Want to share a sanitized one? `git add -f <file>`
+feedback-synthesis-20[0-9][0-9]-*.md
+competitor-*-20[0-9][0-9]-*.md
+transcripts/
 interviews/
-*transcript*
 data/exports/
+# Belt-and-suspenders: never ignore the repo's own versioned source folders.
+!skills/**
+!evals/**
 
 # ENTERPRISE NOTE
 # Add regulated document types here
