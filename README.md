@@ -9,7 +9,7 @@ Fork it, customize it, use it.
 If you've never used Git or Claude Code, do this once:
 
 1. **Install Git.** [git-scm.com/downloads](https://git-scm.com/downloads). On Windows, this gives you **Git Bash** — run all commands below in Git Bash, not PowerShell, so the Unix-style commands work.
-2. **Install Claude Code.** [docs.claude.com/claude-code](https://docs.claude.com/en/docs/claude-code/overview).
+2. **Install Claude Code.** [code.claude.com/docs](https://code.claude.com/docs/en/overview).
 3. **Tell Git who you are** (otherwise your first commit aborts with "Author identity unknown"):
    ```bash
    git config --global user.name "Your Name"
@@ -40,7 +40,7 @@ A PRD reviewer skill evolving v1 → v7, a CLAUDE.md growing then getting pruned
 claude
 ```
 
-> **Activate the skills:** Claude Code auto-loads skills from `.claude/skills/`. The skills here live in `skills/` so they're easy to read and version. To make Claude use one, copy or symlink it: `mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/`.
+> **Activate the skills:** Claude Code auto-loads skills from `.claude/skills/`. The skills here live in `skills/` so they're easy to read and version. To make Claude use one, copy it: `mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/`. That `.claude/skills/` copy is git-ignored — keep editing the source in `skills/` so you only ever version one copy.
 
 ## What's Inside
 
@@ -52,8 +52,10 @@ claude
 │   └── feedback-synthesizer/SKILL.md      ← User feedback synthesis
 ├── evals/
 │   ├── support-chatbot-criteria.md        ← Worked eval, versioned in git
+│   ├── calendar-integration-criteria.md   ← Second worked eval (used by the project-level CLAUDE.md)
 │   └── how-to-write-eval-criteria.md      ← Write your own
 ├── autoresearch/                          ← Sample optimization run (read the git log)
+│   ├── README.md                          ← Start here: how to read the run
 │   ├── launch-announcement-writer.md      ← The prompt the loop optimized
 │   ├── eval-criteria.md                   ← What it scored against
 │   └── run-log.md                         ← 41% → 90%, one reverted experiment
@@ -72,7 +74,7 @@ claude
 
 **1. Skill Versioning:** `git log --oneline -- skills/prd-reviewer/SKILL.md`
 
-**2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out two commits later.
+**2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out in the very next commit.
 
 **3. Autoresearch Tracking:** `git log --oneline -- autoresearch/` — scores in the commit messages show what the loop discovered, including the experiment it reverted.
 
@@ -86,7 +88,7 @@ cp /path/to/this-repo/.gitignore .   # so you don't commit secrets or raw data
 git init && git add . && git commit -m "initial commit: existing PM OS setup"
 ```
 
-Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. Then push to GitHub. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) `/upgrade-to-team-os` command assumes your PM OS is already in a git repo.
+Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. Then push to GitHub. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) upgrade flow assumes your PM OS is already in a git repo, so this is the prerequisite step.
 
 ## The Exercise
 
