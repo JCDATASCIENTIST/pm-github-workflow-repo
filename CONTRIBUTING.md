@@ -52,5 +52,5 @@ Fork and customize for your workflow. You can also contribute improvements back.
 | Good | Bad |
 |---|---|
 | `prd-reviewer v6: require metric thresholds` | `update` |
-| `evals: tighten resolution from 5 to 3 messages` | `fix` |
+| `evals: raise target 0.80 -> 0.85, add revision log table` | `fix` |
 | `round 3 - add worked before/after example (score: 79% -> 90%)` | `wip` |

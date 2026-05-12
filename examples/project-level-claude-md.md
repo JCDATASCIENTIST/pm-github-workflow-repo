@@ -24,5 +24,5 @@
 
 ## Rules (project-specific)
 - All API calls cached 5 minutes minimum
-- No mock data in commits, use data/test-events.json
+- Tests use data/test-events.json — synthetic events only. Real attendee data is PII; keep it in data/exports/ (git-ignored), never in a commit.
 - Screenshot every UI change for PR description

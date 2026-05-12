@@ -13,11 +13,13 @@ final version
 
 ## Good (tells you what changed and why)
 
+Every line below is a real commit from this repo — run `git log --oneline` to find each one:
+
 ```
 prd-reviewer v6: require metric thresholds, not just metric names
 CLAUDE.md: add voice/style section and prototyping workflow preference
-evals: tighten resolution threshold from 5 to 3 messages (abandonment data)
-competitor-scan: add G2/Capterra check
+evals: raise target 0.80 -> 0.85, add revision log table
+CLAUDE.md: prune calendar PR rule (belongs in project CLAUDE.md)
 ```
 
 ## For Autoresearch Runs (include the score)

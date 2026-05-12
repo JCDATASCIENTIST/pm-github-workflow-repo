@@ -1,9 +1,9 @@
 # Eval Scoring Criteria: Calendar Integration
 
 **Feature:** Natural-language scheduling ("book 30 min with Sarah next week")
-**Owner:** [PM NAME]
-**Last reviewed:** [DATE]
-**Baseline:** 0.72
+**Owner:** Jake Torres (Calendar PM)
+**Last reviewed:** 2026-05-04
+**Baseline:** 0.72 (first run, 20 requests, 2026-05-04)
 **Target:** 0.85 (before rollout to 10%)
 **Kill threshold:** below 0.60, pause rollout
 

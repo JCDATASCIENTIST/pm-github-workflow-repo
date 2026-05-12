@@ -53,7 +53,11 @@ Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generate
 | ... | ... | ... | ... |
 
 **Score:** [N] of [5 or 7] checks pass.
-**Verdict:** SHIP-READY (all pass) / NEEDS WORK (1-2 fails) / NOT READY (3+ fails or any of 1, 2, 4 failing).
+**Verdict:** pick the first that matches, top-down:
+- **NOT READY** — any of checks 1, 2, or 4 fail, OR 3+ checks fail total.
+- **NEEDS WORK** — 1-2 checks fail and none of them are 1, 2, or 4.
+- **SHIP-READY** — all checks pass.
+
 **Top fix:** [the single most important gap to close first.]
 ```
 
