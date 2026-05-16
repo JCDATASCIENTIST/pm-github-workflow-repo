@@ -23,7 +23,7 @@ You'll see the rounds, newest first (commit hashes on the left will differ in yo
 ```
 round 5 - revert word-count cap (82% -> 90%, restored best)
 round 4 - cap at 80 words [EXPERIMENT] (score: 90% -> 82%)
-round 3 - add worked before/after example (score: 79% -> 90%)
+round 3 - add worked example + lead-with-audience rule (score: 79% -> 90%)
 round 2 - ban buzzword list (score: 68% -> 79%)
 round 1 - require concrete numbers (score: 41% -> 68%)
 autoresearch: seed launch-announcement-writer v0 (score: 41%)

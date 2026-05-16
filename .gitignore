@@ -78,12 +78,14 @@ screen-recordings/
 # only catch generated outputs, never the repo's own source (skills/, evals/).
 # Ignored by default so a transcript full of customer names can't be committed
 # by accident. Want to share a sanitized one? `git add -f <file>`
-feedback-synthesis-20[0-9][0-9]-*.md
-competitor-*-20[0-9][0-9]-*.md
+feedback-synthesis*.md
+competitor-*.md
 transcripts/
 interviews/
 data/exports/
-# Belt-and-suspenders: never ignore the repo's own versioned source folders.
+# Never ignore the repo's own versioned source. These negations come AFTER the
+# patterns above, so a dated OR undated output named like the globs is ignored
+# at the repo root but a file under skills/ or evals/ is always committable.
 !skills/**
 !evals/**
 

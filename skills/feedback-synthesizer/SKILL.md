@@ -42,7 +42,7 @@ Analyze provided user feedback and produce a structured synthesis. Works with in
 [What needs validation. Specific next steps.]
 
 ### Quote Bank
-[15-20 strongest quotes by theme. Copy-paste ready for PRDs.]
+[Up to 15-20 strongest quotes by theme, copy-paste ready for PRDs. Fewer is fine for small inputs — never pad or invent to hit a count.]
 ```
 
 ## Edge Cases

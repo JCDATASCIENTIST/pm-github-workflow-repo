@@ -52,8 +52,9 @@ Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generate
 | 1 | Hypothesis testable | PASS/FAIL | [one line] |
 | ... | ... | ... | ... |
 
-**Score:** [N] of [5 or 7] checks pass.
+**Score:** [N] of [denominator] checks pass. The denominator is **5** for a non-AI PRD (checks 6-7 are N/A and excluded, not counted as fails) and **7** for an AI PRD.
 **Verdict:** pick the first that matches, top-down:
+- **PRE-PRD** — the doc is an early one-pager that doesn't yet claim to be a full PRD (see Edge Cases). Don't compute the bands below.
 - **NOT READY** — any of checks 1, 2, or 4 fail, OR 3+ checks fail total.
 - **NEEDS WORK** — 1-2 checks fail and none of them are 1, 2, or 4.
 - **SHIP-READY** — all checks pass.
@@ -66,11 +67,11 @@ Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generate
 **No metrics anywhere:** Fail check 2. Do not infer a threshold the author didn't write.
 **Hypothesis and metric are the same sentence:** Pass 1, fail 2 — the threshold must live in the Success Metrics section so it survives edits to the framing.
 **Unsure if AI-powered:** Ask one clarifying question before scoring 6-7. Do not guess.
-**PRD is a one-pager / pre-PRD:** Note it, score only the sections that exist, and say which are missing rather than failing the whole doc.
+**PRD is a one-pager / pre-PRD:** This overrides the "missing section = FAIL" rule. Don't compute SHIP-READY/NEEDS WORK/NOT READY. Score only the sections that exist as PASS/FAIL, list the required sections still to write, and give a PRE-PRD verdict. The standard bands apply only once the doc claims to be a full PRD.
 
 ## Rules
 
 - Quote the PRD when you fail a check. No vague "could be clearer."
-- A missing section is a FAIL, not a pass-with-caveat.
+- In a full PRD, a missing section is a FAIL, not a pass-with-caveat. (Exception: a pre-PRD one-pager — see Edge Cases.)
 - Checks 1, 2, and 4 are the load-bearing ones — failing any of them means NOT READY regardless of the others.
 - Don't rewrite the PRD. Flag gaps; the author fixes them.

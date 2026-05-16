@@ -23,6 +23,7 @@
 - Target: 0.85 before rollout to 10%
 
 ## Rules (project-specific)
+- Tag @jake-torres on every PR and link this folder's PLANNING.md. (Lived in the global CLAUDE.md briefly, then pruned here — see that prune commit.)
 - All API calls cached 5 minutes minimum
 - Tests use data/test-events.json — synthetic events only. Real attendee data is PII; keep it in data/exports/ (git-ignored), never in a commit.
 - Screenshot every UI change for PR description

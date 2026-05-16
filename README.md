@@ -20,6 +20,8 @@ New to Git entirely? [Hannah's GitHub 101](https://hannahstulberg.substack.com/p
 
 ## Quick Start
 
+> **Windows users:** run every command below in **Git Bash** (installed with Git), not PowerShell — the `cp`, `mkdir -p`, and `&&` syntax here is Unix-style.
+
 **1. Fork.** Click "Fork" in the top right corner.
 
 **2. Clone your fork.** HTTPS works out of the box — no SSH key needed:
@@ -35,12 +37,17 @@ git log --oneline
 ```
 A PRD reviewer skill evolving v1 → v7, a CLAUDE.md growing then getting pruned, eval criteria tightening across dated commits, and a full autoresearch run (41% → 90%, with one failed experiment reverted).
 
-**4. Open in Claude Code.**
+**4. Activate a skill (required before Claude will use it).** Claude Code auto-loads skills from `.claude/skills/`, but they ship in `skills/` so they're easy to read and version. Copy one over:
+```bash
+mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/
+```
+Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. The `.claude/skills/` copy is git-ignored, so keep editing the source in `skills/` and re-run the copy when you change it.
+
+**5. Open in Claude Code.**
 ```bash
 claude
 ```
-
-> **Activate the skills:** Claude Code auto-loads skills from `.claude/skills/`. The skills here live in `skills/` so they're easy to read and version. To make Claude use one, copy it: `mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/`. That `.claude/skills/` copy is git-ignored — keep editing the source in `skills/` so you only ever version one copy.
+Now try it: type `review this PRD` and paste one in.
 
 ## What's Inside
 
@@ -84,7 +91,7 @@ claude
 
 ```bash
 cd ~/your-pm-os-folder
-cp /path/to/this-repo/.gitignore .   # so you don't commit secrets or raw data
+cp ~/pm-github-workflow-repo/.gitignore .   # replace ~/pm-github-workflow-repo with wherever you cloned this
 git init && git add . && git commit -m "initial commit: existing PM OS setup"
 ```
 
@@ -96,7 +103,12 @@ Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or da
 2. Create a branch: `git checkout -b my-customization` (keeps `main` clean and makes the PR reviewable).
 3. Replace `CLAUDE.md` with your context (see `examples/claude-md-filled-example.md`).
 4. Add one skill to `skills/`.
-5. Commit with a descriptive message (see `examples/good-vs-bad-commits.md`).
+5. Stage and commit (a commit is two steps — stage, then commit with a message; see `examples/good-vs-bad-commits.md` for what makes a good one):
+   ```bash
+   git add CLAUDE.md skills/
+   git commit -m "customize CLAUDE.md and add my-skill"
+   git log --oneline -1   # confirm it landed — your message should be at the top
+   ```
 6. Push the branch: `git push -u origin my-customization`.
 7. Open a PR back to this repo, using the **Exercise PR Template** in [CONTRIBUTING.md](CONTRIBUTING.md).
 

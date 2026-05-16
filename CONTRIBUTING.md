@@ -53,4 +53,4 @@ Fork and customize for your workflow. You can also contribute improvements back.
 |---|---|
 | `prd-reviewer v6: require metric thresholds` | `update` |
 | `evals: raise target 0.80 -> 0.85, add revision log table` | `fix` |
-| `round 3 - add worked before/after example (score: 79% -> 90%)` | `wip` |
+| `round 3 - add worked example + lead-with-audience rule (score: 79% -> 90%)` | `wip` |
