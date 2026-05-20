@@ -36,7 +36,7 @@
 
 **Skills referencing company context:** Workspace. Strip specifics for a Shared Tools version.
 
-**Decision log entries (Team OS):** Shared Tools repo, `decisions/` folder.
+**Decision log entries (Team OS):** Shared Tools repo, `decisions/` folder — one dated file per call (see `decisions/decision-2026-05-12-google-calendar-only-v1.md` for the format).
 
 **Prototype repos:** Still a Project repo. Archive when killed.
 
@@ -71,4 +71,4 @@ Monthly, review and prune CLAUDE.md: `git log -p -- CLAUDE.md` (works on any rep
 
 ---
 
-*From [GitHub for PMs](https://www.news.aakashg.com/) · [PM OS](https://www.news.aakashg.com/p/pm-os) · [Team OS](https://www.news.aakashg.com/p/claude-code-team-os)*
+*From the [Product Growth newsletter](https://www.news.aakashg.com/) · [PM OS](https://www.news.aakashg.com/p/pm-os) · [Team OS](https://www.news.aakashg.com/p/claude-code-team-os)*

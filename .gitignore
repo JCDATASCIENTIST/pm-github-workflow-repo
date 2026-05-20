@@ -5,8 +5,24 @@
 .env.*
 *.key
 *.pem
+*.p12
+*.keystore
+*.jks
 api-keys.md
 secrets/
+secrets.*
+*token*
+*secret*
+*credential*
+credentials.json
+service-account*.json
+*-adminsdk*.json
+id_rsa
+id_rsa.pub
+id_ed25519
+.npmrc
+.pypirc
+# Belt-and-suspenders only — run a real scanner (gitleaks / trufflehog) in CI.
 
 # OS FILES
 .DS_Store
@@ -73,21 +89,20 @@ screenshots/
 screen-recordings/
 
 # RESEARCH OUTPUTS (often contain customer PII / verbatim quotes)
-# The skills here save dated files like feedback-synthesis-2026-06-01.md and
-# competitor-acme-2026-06-01.md. Patterns are anchored to the DATED form so they
-# only catch generated outputs, never the repo's own source (skills/, evals/).
-# Ignored by default so a transcript full of customer names can't be committed
-# by accident. Want to share a sanitized one? `git add -f <file>`
+# These globs catch any file whose name starts with feedback-synthesis or
+# competitor- (dated or not) — the skills save dated outputs in that form, but
+# we ignore both so a transcript full of customer names can't be committed by
+# accident. Want to share a sanitized one? `git add -f <file>`
 feedback-synthesis*.md
 competitor-*.md
 transcripts/
 interviews/
 data/exports/
-# Never ignore the repo's own versioned source. These negations come AFTER the
-# patterns above, so a dated OR undated output named like the globs is ignored
-# at the repo root but a file under skills/ or evals/ is always committable.
-!skills/**
-!evals/**
+# Re-include ONLY the repo's shipped source, so a PII-named output dropped into
+# skills/ or evals/ still gets caught (the broad globs above still apply there).
+!skills/*/SKILL.md
+!evals/*-criteria.md
+!evals/how-to-write-eval-criteria.md
 
 # ENTERPRISE NOTE
 # Add regulated document types here

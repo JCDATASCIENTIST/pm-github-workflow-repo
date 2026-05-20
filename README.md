@@ -1,6 +1,6 @@
 # PM GitHub Workflow Repo
 
-**Practice repo from [GitHub for PMs: Version Control for Everything You Build With AI](https://www.news.aakashg.com/).**
+**Practice repo from the [Product Growth newsletter](https://www.news.aakashg.com/) (GitHub for PMs: Version Control for Everything You Build With AI).**
 
 Fork it, customize it, use it.
 
@@ -35,26 +35,26 @@ cd pm-github-workflow-repo
 ```bash
 git log --oneline
 ```
-A PRD reviewer skill evolving v1 → v7, a CLAUDE.md growing then getting pruned, eval criteria tightening across dated commits, and a full autoresearch run (41% → 90%, with one failed experiment reverted).
+You'll see a PRD reviewer skill evolving v1 → v7 (then hardened with later fixes), a CLAUDE.md growing then getting pruned, eval criteria tightening, and a full autoresearch run (41% → 90%, with one failed experiment reverted). Plain `git log` also includes the repo's own maintenance commits — to read each story cleanly, one file at a time, use the per-file commands in [The Four Workflows](#the-four-workflows) below.
 
 **4. Activate a skill (required before Claude will use it).** Claude Code auto-loads skills from `.claude/skills/`, but they ship in `skills/` so they're easy to read and version. Copy one over:
 ```bash
 mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/
 ```
-Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. The `.claude/skills/` copy is git-ignored, so keep editing the source in `skills/` and re-run the copy when you change it.
+Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. **IMPORTANT: the `.claude/skills/` copy is a one-time snapshot — editing the source in `skills/` does nothing until you re-run the `cp` command above.** The copy is git-ignored, so you only ever version the one source in `skills/`. (Windows PowerShell, if you're not in Git Bash: `New-Item -ItemType Directory -Force .claude/skills; Copy-Item -Recurse skills/prd-reviewer .claude/skills/`.)
 
 **5. Open in Claude Code.**
 ```bash
 claude
 ```
-Now try it: type `review this PRD` and paste one in.
+Now try it: type `review the PRD in examples/sample-prd.md`. To leave Claude and return to your terminal, type `/exit` (or press Ctrl+C twice). If you see `command not found: claude`, re-open your terminal after installing, or see [code.claude.com/docs](https://code.claude.com/docs/en/overview).
 
 ## What's Inside
 
 ```
 ├── CLAUDE.md                              ← PM workspace config (customize)
 ├── skills/
-│   ├── prd-reviewer/SKILL.md              ← PRD review, 7 versions in git
+│   ├── prd-reviewer/SKILL.md              ← PRD review, v1→v7 plus later fixes in git
 │   ├── competitor-scan/SKILL.md           ← Competitor analysis
 │   └── feedback-synthesizer/SKILL.md      ← User feedback synthesis
 ├── evals/
@@ -69,10 +69,14 @@ Now try it: type `review this PRD` and paste one in.
 ├── examples/
 │   ├── claude-md-filled-example.md        ← Filled-in CLAUDE.md
 │   ├── project-level-claude-md.md         ← Project-specific CLAUDE.md
-│   └── good-vs-bad-commits.md             ← Commit message examples
+│   ├── good-vs-bad-commits.md             ← Commit message examples
+│   └── sample-prd.md                      ← Incomplete PRD to test prd-reviewer on
+├── decisions/
+│   └── decision-2026-05-12-google-calendar-only-v1.md   ← Team OS decision-log example
 ├── docs/
 │   └── which-repo-decision-guide.md       ← Printable decision guide
-├── .gitignore                             ← PM-configured
+├── .gitignore                             ← PM-configured (secrets + PII)
+├── .gitattributes                         ← LF line endings (cross-platform diffs)
 ├── LICENSE                                ← MIT
 └── CONTRIBUTING.md                        ← PR templates
 ```
@@ -81,7 +85,7 @@ Now try it: type `review this PRD` and paste one in.
 
 **1. Skill Versioning:** `git log --oneline -- skills/prd-reviewer/SKILL.md`
 
-**2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out in the very next commit.
+**2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out in the very next commit that touches the file.
 
 **3. Autoresearch Tracking:** `git log --oneline -- autoresearch/` — scores in the commit messages show what the loop discovered, including the experiment it reverted.
 
@@ -91,11 +95,16 @@ Now try it: type `review this PRD` and paste one in.
 
 ```bash
 cd ~/your-pm-os-folder
-cp ~/pm-github-workflow-repo/.gitignore .   # replace ~/pm-github-workflow-repo with wherever you cloned this
-git init && git add . && git commit -m "initial commit: existing PM OS setup"
+cp /path/to/pm-github-workflow-repo/.gitignore .   # run `pwd` inside your clone to find this path
+git init && git branch -M main
+git add . && git status --ignored          # check nothing you wanted is being ignored; git add -f <file> to override
+git commit -m "initial commit: existing PM OS setup"
+# create an empty repo on github.com first, then:
+git remote add origin https://github.com/YOUR-USERNAME/your-pm-os.git
+git push -u origin main
 ```
 
-Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. Then push to GitHub. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) upgrade flow assumes your PM OS is already in a git repo, so this is the prerequisite step.
+Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) upgrade flow assumes your PM OS is already in a git repo, so this is the prerequisite step.
 
 ## The Exercise
 

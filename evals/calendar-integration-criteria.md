@@ -43,8 +43,8 @@ Why: a confident wrong booking is worse than a question.
 
 1. Collect 20 real scheduling requests from beta logs.
 2. Run each through the assistant.
-3. Score each on all 4 criteria (1 = pass, 0 = fail).
-4. Overall score = average (0.00 to 1.00).
+3. Score each on criteria 1 and 2 (they apply to every request). Criteria 3 and 4 are conditional on the request type — score only the one that applies (3 for unambiguous requests, 4 for ambiguous ones) and mark the other N/A. N/A is excluded from that input's denominator; it is not a fail.
+4. Overall score = total points earned / total criteria scored (0.00 to 1.00).
 
 ## Revision Log
 

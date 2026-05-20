@@ -67,7 +67,7 @@ Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generate
 **No metrics anywhere:** Fail check 2. Do not infer a threshold the author didn't write.
 **Hypothesis and metric are the same sentence:** Pass 1, fail 2 — the threshold must live in the Success Metrics section so it survives edits to the framing.
 **Unsure if AI-powered:** Ask one clarifying question before scoring 6-7. Do not guess.
-**PRD is a one-pager / pre-PRD:** This overrides the "missing section = FAIL" rule. Don't compute SHIP-READY/NEEDS WORK/NOT READY. Score only the sections that exist as PASS/FAIL, list the required sections still to write, and give a PRE-PRD verdict. The standard bands apply only once the doc claims to be a full PRD.
+**PRD is a one-pager / pre-PRD:** Trigger — treat as PRE-PRD only if the doc is titled one-pager / brief / exploration, OR 2 or fewer of the 5 core sections (hypothesis, success metrics, non-goals, kill criteria, rollout) are present. When triggered, this overrides the "missing section = FAIL" rule: don't compute SHIP-READY/NEEDS WORK/NOT READY. Score only the sections that exist as PASS/FAIL, list the required sections still to write, and give a PRE-PRD verdict. Otherwise treat missing sections as FAILs and compute the standard bands.
 
 ## Rules
 
