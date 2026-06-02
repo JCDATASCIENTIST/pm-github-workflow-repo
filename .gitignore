@@ -3,6 +3,7 @@
 # SECRETS
 .env
 .env.*
+*.env
 *.key
 *.pem
 *.p12
@@ -15,7 +16,8 @@ secrets.*
 *secret*
 *credential*
 credentials.json
-service-account*.json
+*service-account*.json
+*service_account*.json
 *-adminsdk*.json
 id_rsa
 id_rsa.pub
@@ -97,6 +99,9 @@ feedback-synthesis*.md
 competitor-*.md
 transcripts/
 interviews/
+*transcript*
+*interview*
+*-raw.*
 data/exports/
 # Re-include ONLY the repo's shipped source, so a PII-named output dropped into
 # skills/ or evals/ still gets caught (the broad globs above still apply there).

@@ -12,8 +12,9 @@ Review the provided PRD against the checklist below. This is a **document-comple
 Checks 1-5 apply to every PRD. Each check targets a different section, so a PRD can pass one and fail another.
 
 1. **Hypothesis present and testable** (Hypothesis section).
-   FAIL: "We will build a calendar integration." (a feature, not a hypothesis)
-   PASS: "Calendar integration will reduce scheduling tickets by 20% within 8 weeks." (states expected effect + timeframe)
+   A clear direction and a measurable effect. The numeric threshold itself is Check 2's job — don't fail a hypothesis here just for lacking a number.
+   FAIL: "We will build a calendar integration." (a feature, no claimed effect)
+   PASS: "Natural-language scheduling will reduce time-to-schedule and scheduling tickets — both measurable." (testable direction and effect)
 2. **Success metrics have numeric thresholds** (Success Metrics section).
    The number must appear in the Success Metrics section itself, not only restated from the hypothesis.
    FAIL: "Measure user engagement."
@@ -30,7 +31,7 @@ Checks 1-5 apply to every PRD. Each check targets a different section, so a PRD 
 
 ## AI Feature Criteria
 
-Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generates, ranks, or classifies the output (chatbot, summarizer, recommender, search). If the feature is deterministic (a form, a setting, a CRUD screen), skip 6-7 and note "N/A — not an AI feature."
+Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generates, ranks, or classifies the output (chatbot, summarizer, recommender, search). If the feature is deterministic (a form, a settings toggle, a data table), skip 6-7 and note "N/A — not an AI feature."
 
 6. **Behavior contract with examples.**
    5+ input/output examples showing expected behavior, including 2+ edge cases.

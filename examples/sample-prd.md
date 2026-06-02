@@ -14,11 +14,11 @@ Scheduling across calendars is the #2 source of support tickets (1,240 last quar
 An AI assistant that parses a natural-language request, checks attendee availability via the Google Calendar API, and proposes a slot to confirm. One screen, one confirm.
 
 ## Success Metrics
-- Scheduling abandonment drops from 38% to under 20% within 6 weeks of GA.
+- Scheduling abandonment drops from 38% to under 20% within 6 weeks of GA (general availability).
 - Median time-to-schedule under 30 seconds.
 
 ## Rollout
-Ship behind a flag to the internal dogfood group first.
+Ship behind a flag to the internal dogfood group (employees testing before customers) first.
 
 <!--
 On purpose, this PRD is MISSING:

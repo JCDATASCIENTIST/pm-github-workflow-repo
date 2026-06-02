@@ -57,3 +57,4 @@ Research the specified competitor. Use web search for current information. Focus
 - Cite every claim with a URL.
 - Use actual pricing from the pricing page, not from blog posts.
 - Save as `competitor-[name]-[YYYY-MM-DD].md` in the project folder.
+- That filename is git-ignored by default (it can hold scraped/competitive detail you may not want public). To version a reviewed copy, use `git add -f <file>`.

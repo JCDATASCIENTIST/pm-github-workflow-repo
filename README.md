@@ -4,6 +4,8 @@
 
 Fork it, customize it, use it.
 
+> **Reading this on your phone?** The GitHub mobile app and website let you browse the files and scroll the git history — the Four Workflows below are all `git log` commands you can read in-app. Cloning, activating skills, and running `claude` need a desktop terminal.
+
 ## Before you start (first time only)
 
 If you've never used Git or Claude Code, do this once:
@@ -30,6 +32,7 @@ git clone https://github.com/YOUR-USERNAME/pm-github-workflow-repo.git
 cd pm-github-workflow-repo
 ```
 (Prefer SSH? `git clone git@github.com:YOUR-USERNAME/pm-github-workflow-repo.git` — but only if you've already added an SSH key to GitHub.)
+If you see `destination path ... already exists`, you've cloned before — just `cd pm-github-workflow-repo`, or clone into a new folder name.
 
 **3. Explore the history.** This is the whole point — the history is the lesson:
 ```bash
@@ -41,7 +44,7 @@ You'll see a PRD reviewer skill evolving v1 → v7 (then hardened with later fix
 ```bash
 mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/
 ```
-Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. **IMPORTANT: the `.claude/skills/` copy is a one-time snapshot — editing the source in `skills/` does nothing until you re-run the `cp` command above.** The copy is git-ignored, so you only ever version the one source in `skills/`. (Windows PowerShell, if you're not in Git Bash: `New-Item -ItemType Directory -Force .claude/skills; Copy-Item -Recurse skills/prd-reviewer .claude/skills/`.)
+Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. **IMPORTANT: always edit and commit the source in `skills/`, never the `.claude/skills/` copy.** That copy is a one-time, git-ignored snapshot — editing the source does nothing until you re-run the `cp` command above, and editing the copy will never show in `git status` or a commit. (Windows PowerShell, if you're not in Git Bash: `New-Item -ItemType Directory -Force .claude/skills; Copy-Item -Recurse skills/prd-reviewer .claude/skills/`.)
 
 **5. Open in Claude Code.**
 ```bash
@@ -93,6 +96,8 @@ Now try it: type `review the PRD in examples/sample-prd.md`. To leave Claude and
 
 ## Coming From PM OS?
 
+> Windows: run these in Git Bash too — or replace `cp ... .` with `Copy-Item ... .` and run the `&&` lines separately in PowerShell.
+
 ```bash
 cd ~/your-pm-os-folder
 cp /path/to/pm-github-workflow-repo/.gitignore .   # run `pwd` inside your clone to find this path
@@ -104,7 +109,7 @@ git remote add origin https://github.com/YOUR-USERNAME/your-pm-os.git
 git push -u origin main
 ```
 
-Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) upgrade flow assumes your PM OS is already in a git repo, so this is the prerequisite step.
+Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or data export can land in your first commit. Note this `.gitignore` is tuned to *this* repo's layout (it re-includes `skills/*/SKILL.md` and `evals/*-criteria.md`); after copying, run `git status --ignored` and add a `!path/to/your-file` line for anything of yours that's wrongly ignored. The [Team OS](https://www.news.aakashg.com/p/claude-code-team-os) upgrade flow assumes your PM OS is already in a git repo, so this is the prerequisite step.
 
 ## The Exercise
 
@@ -118,7 +123,7 @@ Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or da
    git commit -m "customize CLAUDE.md and add my-skill"
    git log --oneline -1   # confirm it landed — your message should be at the top
    ```
-6. Push the branch: `git push -u origin my-customization`.
+6. Push the branch: `git push -u origin my-customization`. (This pushes to **your fork**. A 403/permission error means you cloned the original repo instead of your fork — re-clone from your fork's URL, step 2.)
 7. Open a PR back to this repo, using the **Exercise PR Template** in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 It's a PM-artifact PR, not a code PR — that's the point.

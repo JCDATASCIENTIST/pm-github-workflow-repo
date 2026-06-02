@@ -12,7 +12,7 @@
 - Engineer lead: Jake Torres (prefers detailed tickets with acceptance criteria)
 
 ## Technical Constraints
-- Google Calendar API only (no Outlook in v1)
+- Google Calendar API only (no Outlook in v1) — see `decisions/decision-2026-05-12-google-calendar-only-v1.md`
 - Rate limit: 10 requests/user/minute
 - Must work with existing OAuth flow
 - Store in UTC, display in user's local timezone
