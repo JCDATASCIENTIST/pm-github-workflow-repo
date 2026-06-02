@@ -2,6 +2,12 @@ name: gitleaks
 
 # Secret scanning on every push and PR. The .gitignore is the first line of
 # defense; this is the real safety net (catches secrets a glob would miss).
+#
+# Personal/public repos: works as-is, no setup.
+# ORGANIZATION-owned repos: gitleaks-action requires a FREE license key. Get one
+# at gitleaks.io and add it as a repo secret named GITLEAKS_LICENSE, or the run
+# fails with a license error. (Most PMs trying this at work fork into an org —
+# this is the step that bites them.)
 on:
   push:
   pull_request:
@@ -17,3 +23,5 @@ jobs:
         uses: gitleaks/gitleaks-action@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Required only for organization-owned repos (free key from gitleaks.io):
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}

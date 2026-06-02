@@ -55,4 +55,4 @@ Analyze provided user feedback and produce a structured synthesis. Works with in
 - Never invent quotes. Every quote must come verbatim from sources.
 - Count honestly. 1/8 is "1/8," not "several."
 - Save as `feedback-synthesis-[YYYY-MM-DD].md` in the project folder.
-- That filename is git-ignored by default (it holds verbatim customer quotes / PII — personally identifiable information). To version a sanitized copy, use `git add -f <file>`.
+- Saved with the dated name above, the file is git-ignored by default (the ignore rule keys off the YYYY-MM-DD date; drop the date and it is NOT protected). It holds verbatim customer quotes / PII (personally identifiable information). To version a sanitized copy, use `git add -f <file>`.

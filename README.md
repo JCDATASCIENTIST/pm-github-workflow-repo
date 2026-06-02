@@ -80,6 +80,10 @@ At the Claude prompt (the `>` you now see — this goes to Claude, not the shell
 │   └── decision-2026-04-10-google-calendar-only-v1.md   ← Team OS decision-log example
 ├── docs/
 │   └── which-repo-decision-guide.md       ← Printable decision guide
+├── .github/
+│   ├── PULL_REQUEST_TEMPLATE.md           ← auto-fills the Exercise PR
+│   ├── CODEOWNERS                         ← review gating (replace @YOUR-USERNAME)
+│   └── workflows/gitleaks.yml             ← secret scanning on push/PR
 ├── .gitignore                             ← PM-configured (secrets + PII)
 ├── .gitattributes                         ← LF line endings (cross-platform diffs)
 ├── LICENSE                                ← MIT
@@ -92,7 +96,7 @@ At the Claude prompt (the `>` you now see — this goes to Claude, not the shell
 
 **2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out in the very next commit that touches the file.
 
-**3. Autoresearch Tracking:** `git log --oneline -- autoresearch/` — scores in the commit messages show what the loop discovered, including the experiment it reverted.
+**3. Autoresearch Tracking:** `git log --oneline -- autoresearch/launch-announcement-writer.md` — the six rounds against the prompt itself, scores in each message, including the experiment it reverted. (Scope to the prompt file so later doc edits don't clutter the run.)
 
 **4. Eval Versioning:** `git log --oneline -- evals/support-chatbot-criteria.md` — baseline → new criterion → raised target, each dated.
 
@@ -102,7 +106,7 @@ At the Claude prompt (the `>` you now see — this goes to Claude, not the shell
 
 ```bash
 cd ~/your-pm-os-folder
-cp /path/to/pm-github-workflow-repo/.gitignore .   # run `pwd` inside your clone to find this path
+cp YOUR-CLONE-PATH/.gitignore .   # YOUR-CLONE-PATH = run `pwd` inside the pm-github-workflow-repo you cloned, paste what it prints (e.g. ~/Downloads/pm-github-workflow-repo)
 git init && git branch -M main
 git add . && git status --ignored          # check nothing you wanted is being ignored; git add -f <file> to override
 git commit -m "initial commit: existing PM OS setup"

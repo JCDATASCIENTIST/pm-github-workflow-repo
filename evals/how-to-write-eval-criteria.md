@@ -32,9 +32,9 @@ Write criteria from failures you have seen, not from imagination.
 
 Fewer than 3: too coarse. More than 6: the model games the checklist.
 
-## Step 5: Test on 20 Inputs
+## Step 5: Test on 20+ Inputs
 
-If everything passes, criteria are too easy. If everything fails, too strict.
+20 is a floor — use more for higher-variance tasks (the launch-announcement run in `autoresearch/` uses 25). If everything passes, criteria are too easy. If everything fails, too strict.
 
 ## Template
 
@@ -43,6 +43,7 @@ If everything passes, criteria are too easy. If everything fails, too strict.
 
 **Feature:** [one line]
 **Owner:** [PM]
+**Last reviewed:** [YYYY-MM-DD]
 **Baseline:** [X.XX]
 **Target:** [X.XX]
 **Kill threshold:** [below X.XX, do what?]
@@ -59,6 +60,9 @@ Why: [one line]
 2. Run each through [feature].
 3. Score (1 = pass, 0 = fail).
 4. Overall = average (0.00 to 1.00).
+
+## Revision Log
+Tracked in git. Review the first Monday of each month.
 ```
 
 For the full eval methodology, see [Experimentation: Evals are the new PRD](https://www.news.aakashg.com/p/ankur-goyal-podcast).

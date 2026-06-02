@@ -1,3 +1,5 @@
+<!-- TEMPLATE: replace every [BRACKETED] value with your own. Claude Code loads this
+file every session. See examples/claude-md-filled-example.md for a completed version. -->
 # CLAUDE.md
 
 ## Who I Am

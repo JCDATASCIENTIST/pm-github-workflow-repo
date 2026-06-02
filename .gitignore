@@ -56,6 +56,9 @@ venv/
 *.csv
 *.xlsx
 *.xls
+*.db
+*.sqlite
+*.sqlite3
 data/raw/
 exports/
 recordings/

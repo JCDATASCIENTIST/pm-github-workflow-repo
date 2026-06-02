@@ -26,5 +26,5 @@ On purpose, this PRD is MISSING:
 - Kill criteria (when do we roll back?)
 - A complete rollout plan with ramp gates (only "dogfood", no % gates)
 - For the AI feature: a behavior contract with examples, and eval criteria
-Run prd-reviewer and it should flag these and return NOT READY (check 4 fails).
+It PASSES checks 1 (testable hypothesis) and 2 (numeric metrics). Run prd-reviewer: 2 of 7 pass, verdict NOT READY (checks 3/4/5/6/7 fail — and a failing check 4 alone already forces NOT READY).
 -->
