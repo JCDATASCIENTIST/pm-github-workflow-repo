@@ -36,7 +36,7 @@
 
 **Skills referencing company context:** Workspace. Strip specifics for a Shared Tools version.
 
-**Decision log entries (Team OS):** Shared Tools repo, `decisions/` folder — one dated file per call (see `decisions/decision-2026-05-12-google-calendar-only-v1.md` for the format).
+**Decision log entries (Team OS):** Shared Tools repo, `decisions/` folder — one dated file per call (see `decisions/decision-2026-04-10-google-calendar-only-v1.md` for the format).
 
 **Prototype repos:** Still a Project repo. Archive when killed.
 

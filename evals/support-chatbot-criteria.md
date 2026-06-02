@@ -59,6 +59,6 @@ Tracked in git — `git log --oneline -- evals/support-chatbot-criteria.md`. Whe
 |---|---|---|---|
 | 2026-02-24 | Recorded 0.71 baseline | First scored run vs. support logs | Below 0.80 target |
 | 2026-02-28 | Added criterion 4 (no full card/account numbers) | Security review found a leaked PAN | Raised bar — score dipped to 0.68 next run |
-| 2026-03-04 | Raised target 0.80 → 0.85 | Prompt fix landed; run hit 0.86, sustained 3 weeks | New floor for rollout |
+| 2026-03-04 | Raised target 0.80 → 0.85 | Prompt fix landed; run hit 0.86, sustained across 3 runs | New floor for rollout |
 
 Cadence: review the first Monday of each month. Criteria should change *less* often than the prompts they score — weekly churn means the criteria aren't stable yet.

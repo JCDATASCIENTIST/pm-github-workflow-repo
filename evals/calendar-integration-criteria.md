@@ -9,7 +9,7 @@
 
 This is the eval referenced by `examples/project-level-claude-md.md`. It scores the AI scheduling assistant's output offline, the same way `support-chatbot-criteria.md` does — versioned in git so a score drop can be diagnosed (criteria changed vs. model regressed).
 
-Scope decision: Google Calendar only in v1 (Outlook is out) — see `decisions/decision-2026-05-12-google-calendar-only-v1.md`.
+Scope decision: Google Calendar only in v1 (Outlook is out) — see `decisions/decision-2026-04-10-google-calendar-only-v1.md`.
 
 ## Criteria (4 binary questions)
 

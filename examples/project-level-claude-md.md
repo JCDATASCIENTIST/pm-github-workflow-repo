@@ -9,10 +9,11 @@
 ## Context
 - PRD: see PLANNING.md in this folder
 - Status: In development, targeting June 15 launch
-- Engineer lead: Jake Torres (prefers detailed tickets with acceptance criteria)
+- PM lead: Jake Torres
+- Engineer lead: Dana Wu (prefers detailed tickets with acceptance criteria)
 
 ## Technical Constraints
-- Google Calendar API only (no Outlook in v1) — see `decisions/decision-2026-05-12-google-calendar-only-v1.md`
+- Google Calendar API only (no Outlook in v1) — see `decisions/decision-2026-04-10-google-calendar-only-v1.md`
 - Rate limit: 10 requests/user/minute
 - Must work with existing OAuth flow
 - Store in UTC, display in user's local timezone

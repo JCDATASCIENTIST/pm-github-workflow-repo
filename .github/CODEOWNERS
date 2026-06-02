@@ -1,0 +1,13 @@
+# CODEOWNERS — require a review from the right person before changes merge.
+# Replace @YOUR-USERNAME / @your-org/team with real handles in your fork.
+# GitHub auto-requests these reviewers on matching PRs (needs branch protection
+# with "Require review from Code Owners" enabled in Settings → Branches).
+
+# Default owner for everything
+*                       @YOUR-USERNAME
+
+# Evals change the bar for AI features — gate them on the AI/eval owner
+/evals/                 @YOUR-USERNAME
+
+# Skills are shared tools — gate on whoever maintains the toolkit
+/skills/                @YOUR-USERNAME

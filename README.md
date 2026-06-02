@@ -4,7 +4,7 @@
 
 Fork it, customize it, use it.
 
-> **Reading this on your phone?** The GitHub mobile app and website let you browse the files and scroll the git history — the Four Workflows below are all `git log` commands you can read in-app. Cloning, activating skills, and running `claude` need a desktop terminal.
+> **Reading this on your phone?** Open github.com in a mobile browser to read the files and per-file history (tap a file, then the History/clock icon) — that's the Four Workflows. The GitHub mobile app is best for PRs and notifications. Cloning, activating skills, and running `claude` all need a desktop terminal.
 
 ## Before you start (first time only)
 
@@ -38,7 +38,9 @@ If you see `destination path ... already exists`, you've cloned before — just 
 ```bash
 git log --oneline
 ```
-You'll see a PRD reviewer skill evolving v1 → v7 (then hardened with later fixes), a CLAUDE.md growing then getting pruned, eval criteria tightening, and a full autoresearch run (41% → 90%, with one failed experiment reverted). Plain `git log` also includes the repo's own maintenance commits — to read each story cleanly, one file at a time, use the per-file commands in [The Four Workflows](#the-four-workflows) below.
+This opens a scrollable view (the `less` pager) — use Space or the arrow keys to scroll, and **press `q` to return to your terminal**. (Same for any `git log` command below, including `git log -p`.)
+
+You'll see a PRD (Product Requirements Document) reviewer skill evolving v1 → v7 (then hardened with later fixes), a CLAUDE.md growing then getting pruned, eval criteria tightening, and a full autoresearch run (41% → 90%, with one failed experiment reverted). Plain `git log` also includes the repo's own maintenance commits — to read each story cleanly, one file at a time, use the per-file commands in [The Four Workflows](#the-four-workflows) below.
 
 **4. Activate a skill (required before Claude will use it).** Claude Code auto-loads skills from `.claude/skills/`, but they ship in `skills/` so they're easy to read and version. Copy one over:
 ```bash
@@ -50,7 +52,7 @@ Without this copy, asking Claude to "review this PRD" just gets a generic answer
 ```bash
 claude
 ```
-Now try it: type `review the PRD in examples/sample-prd.md`. To leave Claude and return to your terminal, type `/exit` (or press Ctrl+C twice). If you see `command not found: claude`, re-open your terminal after installing, or see [code.claude.com/docs](https://code.claude.com/docs/en/overview).
+At the Claude prompt (the `>` you now see — this goes to Claude, not the shell), type `review the PRD in examples/sample-prd.md` and press Enter. To leave Claude and return to your terminal, type `/exit` (or press Ctrl+C twice). If `claude` won't start — `command not found: claude`, or on Windows `claude is not recognized...` — close and reopen your terminal so PATH refreshes, then retry; or see [code.claude.com/docs](https://code.claude.com/docs/en/overview).
 
 ## What's Inside
 
@@ -75,7 +77,7 @@ Now try it: type `review the PRD in examples/sample-prd.md`. To leave Claude and
 │   ├── good-vs-bad-commits.md             ← Commit message examples
 │   └── sample-prd.md                      ← Incomplete PRD to test prd-reviewer on
 ├── decisions/
-│   └── decision-2026-05-12-google-calendar-only-v1.md   ← Team OS decision-log example
+│   └── decision-2026-04-10-google-calendar-only-v1.md   ← Team OS decision-log example
 ├── docs/
 │   └── which-repo-decision-guide.md       ← Printable decision guide
 ├── .gitignore                             ← PM-configured (secrets + PII)
@@ -124,7 +126,7 @@ Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or da
    git log --oneline -1   # confirm it landed — your message should be at the top
    ```
 6. Push the branch: `git push -u origin my-customization`. (This pushes to **your fork**. A 403/permission error means you cloned the original repo instead of your fork — re-clone from your fork's URL, step 2.)
-7. Open a PR back to this repo, using the **Exercise PR Template** in [CONTRIBUTING.md](CONTRIBUTING.md).
+7. Open a Pull Request (PR) back to this repo, using the **Exercise PR Template** in [CONTRIBUTING.md](CONTRIBUTING.md) (it also auto-fills from the repo's PR template).
 
 It's a PM-artifact PR, not a code PR — that's the point.
 

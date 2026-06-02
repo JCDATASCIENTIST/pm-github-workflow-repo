@@ -1,30 +1,37 @@
 # PM GitHub Workflow .gitignore
 
 # SECRETS
+# Scoped to real credential FILES (not bare substrings), so a doc named
+# token-economy-prd.md or secret-sauce-strategy.md is NOT swallowed.
 .env
 .env.*
 *.env
 *.key
 *.pem
 *.p12
+*.pfx
 *.keystore
 *.jks
 api-keys.md
 secrets/
 secrets.*
-*token*
-*secret*
-*credential*
 credentials.json
+*-credentials.json
+*credential*.json
 *service-account*.json
 *service_account*.json
 *-adminsdk*.json
+*token*.json
+*token*.txt
+*secret*.json
+*secret*.yaml
+*secret*.yml
 id_rsa
 id_rsa.pub
 id_ed25519
 .npmrc
 .pypirc
-# Belt-and-suspenders only — run a real scanner (gitleaks / trufflehog) in CI.
+# A scanner is the real safety net — this repo ships .github/workflows/gitleaks.yml.
 
 # OS FILES
 .DS_Store
@@ -91,20 +98,18 @@ screenshots/
 screen-recordings/
 
 # RESEARCH OUTPUTS (often contain customer PII / verbatim quotes)
-# These globs catch any file whose name starts with feedback-synthesis or
-# competitor- (dated or not) — the skills save dated outputs in that form, but
-# we ignore both so a transcript full of customer names can't be committed by
-# accident. Want to share a sanitized one? `git add -f <file>`
-feedback-synthesis*.md
-competitor-*.md
-transcripts/
+# Anchored to the DATED filenames the skills emit (feedback-synthesis-2026-...,
+# competitor-acme-2026-...) and to research directories — so a template or doc
+# like interview-prep.md or competitor-analysis-framework.md is NOT swallowed,
+# but a real dated output is. Want to share a sanitized one? `git add -f <file>`
+feedback-synthesis-2[0-9][0-9][0-9]-*.md
+competitor-*-2[0-9][0-9][0-9]-*.md
 interviews/
-*transcript*
-*interview*
+transcripts/
 *-raw.*
 data/exports/
-# Re-include ONLY the repo's shipped source, so a PII-named output dropped into
-# skills/ or evals/ still gets caught (the broad globs above still apply there).
+# Re-include the repo's shipped source, so a dated PII output dropped into
+# skills/ or evals/ still gets caught while the source files stay committable.
 !skills/*/SKILL.md
 !evals/*-criteria.md
 !evals/how-to-write-eval-criteria.md

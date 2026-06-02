@@ -1,6 +1,6 @@
 # Decision: Google Calendar only for Calendar Integration v1
 
-**Date:** 2026-05-12
+**Date:** 2026-04-10
 **Status:** Accepted
 **Owner:** Jake Torres (Calendar PM)
 **Deciders:** Calendar PM, Eng lead, Design lead

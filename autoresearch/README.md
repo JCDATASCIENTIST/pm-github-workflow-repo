@@ -4,7 +4,7 @@ This folder is a **worked example of the autoresearch experiment-tracking workfl
 
 ## What happened
 
-An overnight optimization loop (the "Karpathy loop") ran against `launch-announcement-writer.md` — a prompt that drafts product launch announcements. Each round:
+An overnight optimization loop (the "Karpathy loop" — an automated test-mutate-keep-if-better cycle; see the [Autoresearch Guide](https://www.aibyaakash.com/p/autoresearch-guide)) ran against `launch-announcement-writer.md` — a prompt that drafts product launch announcements. Each round:
 
 1. Mutated the prompt.
 2. Scored the output against the eval in `eval-criteria.md` (4 binary checks, 25 sample inputs).
