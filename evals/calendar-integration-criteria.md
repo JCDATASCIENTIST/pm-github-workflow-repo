@@ -2,8 +2,8 @@
 
 **Feature:** Natural-language scheduling ("book 30 min with Sarah next week")
 **Owner:** Jake Torres (Calendar PM)
-**Last reviewed:** 2026-05-04
-**Baseline:** 0.72 (first run, 20 requests, 2026-05-04)
+**Last reviewed:** 2026-04-13
+**Baseline:** 0.72 (first run, 20 requests, 2026-04-13)
 **Target:** 0.85 (before rollout to 10%)
 **Kill threshold:** below 0.60, pause rollout
 
