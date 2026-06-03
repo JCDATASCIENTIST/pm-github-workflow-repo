@@ -31,6 +31,14 @@ id_rsa.pub
 id_ed25519
 .npmrc
 .pypirc
+# Cloud / infra credentials (the most-leaked files in real repos)
+.aws/
+kubeconfig
+*.kubeconfig
+.kube/config
+.docker/config.json
+gha-creds-*.json
+application_default_credentials.json
 # A scanner is the real safety net — this repo ships .github/workflows/gitleaks.yml.
 
 # OS FILES

@@ -45,6 +45,11 @@ Analyze provided user feedback and produce a structured synthesis. Works with in
 [Up to 15-20 strongest quotes by theme, copy-paste ready for PRDs. Fewer is fine for small inputs — never pad or invent to hit a count.]
 ```
 
+## Good vs Bad Output
+
+GOOD: "Onboarding friction — 6/8 sources, high severity. 'I gave up at the API-key step.' — Ticket #4412."
+BAD: "Several users found onboarding confusing." (no count, no severity, no verbatim quote, no source)
+
 ## Edge Cases
 
 **Fewer than 5 sources:** Flag low confidence. Recommend 5+ more before decisions.

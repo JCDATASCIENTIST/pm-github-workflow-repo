@@ -24,7 +24,7 @@ CLAUDE.md: prune calendar PR rule (belongs in project CLAUDE.md)
 
 ## For Autoresearch Runs (include the score)
 
-These are the *actual* commits from this repo's `autoresearch/` run — run `git log --oneline -- autoresearch/` to confirm they match (use ASCII `->`, since git messages aren't Unicode):
+These are the *actual* commits from this repo's autoresearch run — run `git log --oneline -- autoresearch/launch-announcement-writer.md` to confirm (scoped to the prompt file, you'll see the seed plus these five rounds; we keep the score arrow as ASCII `->` so it renders on every terminal):
 
 ```
 round 1 - require concrete numbers (score: 41% -> 68%)

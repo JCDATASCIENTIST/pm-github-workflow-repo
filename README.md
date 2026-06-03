@@ -10,7 +10,7 @@ Fork it, customize it, use it.
 
 If you've never used Git or Claude Code, do this once:
 
-1. **Install Git.** [git-scm.com/downloads](https://git-scm.com/downloads). On Windows, this gives you **Git Bash** — run all commands below in Git Bash, not PowerShell, so the Unix-style commands work.
+1. **Install Git.** [git-scm.com/downloads](https://git-scm.com/downloads). On Windows, this gives you **Git Bash** — run all commands below in Git Bash, not PowerShell, so the Unix-style commands work. (If you ever see `warning: LF will be replaced by CRLF` when committing on Windows, it's harmless — `.gitattributes` keeps the stored files consistent.)
 2. **Install Claude Code.** [code.claude.com/docs](https://code.claude.com/docs/en/overview).
 3. **Tell Git who you are** (otherwise your first commit aborts with "Author identity unknown"):
    ```bash
@@ -46,7 +46,7 @@ You'll see a PRD (Product Requirements Document) reviewer skill evolving v1 → 
 ```bash
 mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/
 ```
-Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. **IMPORTANT: always edit and commit the source in `skills/`, never the `.claude/skills/` copy.** That copy is a one-time, git-ignored snapshot — editing the source does nothing until you re-run the `cp` command above, and editing the copy will never show in `git status` or a commit. (Windows PowerShell, if you're not in Git Bash: `New-Item -ItemType Directory -Force .claude/skills; Copy-Item -Recurse skills/prd-reviewer .claude/skills/`.)
+Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. **IMPORTANT: always edit and commit the source in `skills/`, never the `.claude/skills/` copy.** That copy is a one-time, git-ignored snapshot — editing the source does nothing until you re-run the `cp` command above, and editing the copy will never show in `git status` or a commit. (Windows PowerShell, if you're not in Git Bash: `New-Item -ItemType Directory -Force .claude/skills; Copy-Item -Recurse -Force skills/prd-reviewer .claude/skills/` — re-run that exact line after editing the source to refresh the copy.)
 
 **5. Open in Claude Code.**
 ```bash
@@ -96,7 +96,7 @@ At the Claude prompt (the `>` you now see — this goes to Claude, not the shell
 
 **2. CLAUDE.md Pruning:** `git log -p -- CLAUDE.md` — watch a project-specific rule get added, then pruned back out in the very next commit that touches the file.
 
-**3. Autoresearch Tracking:** `git log --oneline -- autoresearch/launch-announcement-writer.md` — the six rounds against the prompt itself, scores in each message, including the experiment it reverted. (Scope to the prompt file so later doc edits don't clutter the run.)
+**3. Autoresearch Tracking:** `git log --oneline -- autoresearch/launch-announcement-writer.md` — the seed plus five optimization rounds against the prompt itself, scores in each message, including the experiment it reverted. (Scope to the prompt file so later doc edits don't clutter the run.)
 
 **4. Eval Versioning:** `git log --oneline -- evals/support-chatbot-criteria.md` — baseline → new criterion → raised target, each dated.
 
@@ -122,7 +122,7 @@ Copy the `.gitignore` in *before* `git add .` — otherwise a stray `.env` or da
 1. Fork this repo (and clone it — see Quick Start).
 2. Create a branch: `git checkout -b my-customization` (keeps `main` clean and makes the PR reviewable).
 3. Replace `CLAUDE.md` with your context (see `examples/claude-md-filled-example.md`).
-4. Add one skill to `skills/`.
+4. Add one skill: `mkdir -p skills/my-skill` then create `skills/my-skill/SKILL.md` (copy a shipped one as a starting point).
 5. Stage and commit (a commit is two steps — stage, then commit with a message; see `examples/good-vs-bad-commits.md` for what makes a good one):
    ```bash
    git add CLAUDE.md skills/

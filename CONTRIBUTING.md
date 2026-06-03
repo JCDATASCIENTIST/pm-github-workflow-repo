@@ -47,7 +47,7 @@ If you fork this for a team: edit `.github/CODEOWNERS` and replace `@YOUR-USERNA
 ## Adding a New Skill
 
 1. Create `skills/your-skill-name/SKILL.md`
-2. Include: YAML front matter, instructions, output format, PASS/FAIL examples, edge cases, rules
+2. Include: YAML front matter, instructions, output format, examples (PASS/FAIL for a checker skill like prd-reviewer; a good-vs-bad output sample for a generative skill like competitor-scan), edge cases, rules
 3. Test on 3+ real inputs
 4. Open a PR with example outputs
 

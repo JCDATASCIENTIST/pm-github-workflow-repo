@@ -46,6 +46,11 @@ Research the specified competitor. Use web search for current information. Focus
 - Features we have that they don't: [list]
 ```
 
+## Good vs Bad Output
+
+GOOD: "Pricing: Pro tier $49/user/mo (pricing page, accessed 2026-05). G2: 4.4/5 across 212 reviews; top complaint: slow support."
+BAD: "They're pretty expensive and people seem to like them." (no source, no number, no date)
+
 ## Edge Cases
 
 **Private company (no public pricing):** Write "Pricing: not publicly available."
