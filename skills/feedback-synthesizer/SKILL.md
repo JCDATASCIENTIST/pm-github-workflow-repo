@@ -59,5 +59,5 @@ BAD: "Several users found onboarding confusing." (no count, no severity, no verb
 ## Rules
 - Never invent quotes. Every quote must come verbatim from sources.
 - Count honestly. 1/8 is "1/8," not "several."
-- Save as `feedback-synthesis-[YYYY-MM-DD].md` in the project folder.
-- Saved with the dated name above, the file is git-ignored by default (the ignore rule keys off the YYYY-MM-DD date; drop the date and it is NOT protected). It holds verbatim customer quotes / PII (personally identifiable information). To version a sanitized copy, use `git add -f <file>`.
+- Save with this exact dated filename: `feedback-synthesis-[YYYY-MM-DD].md` (anywhere in the repo — the ignore rule keys off the date in the name, not the folder).
+- Saved that way, the file is git-ignored by default; drop the date and it is NOT protected. It holds verbatim customer quotes / PII (personally identifiable information). To version a sanitized copy, use `git add -f <file>`.

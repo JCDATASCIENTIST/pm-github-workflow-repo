@@ -62,6 +62,8 @@ venv/
 .ipynb_checkpoints/
 
 # LARGE DATA FILES
+# Broad by design (data exports are the #1 accidental commit). Tracking a
+# template .xlsx/.csv? `git add -f it`, or add a `!your-template.xlsx` re-include.
 *.csv
 *.xlsx
 *.xls

@@ -61,5 +61,5 @@ BAD: "They're pretty expensive and people seem to like them." (no source, no num
 ## Rules
 - Cite every claim with a URL.
 - Use actual pricing from the pricing page, not from blog posts.
-- Save as `competitor-[name]-[YYYY-MM-DD].md` in the project folder.
-- Saved with the dated name above, the file is git-ignored by default (the ignore rule keys off the YYYY-MM-DD date; drop the date and it is NOT protected). It can hold competitive detail you may not want public. To version a reviewed copy, use `git add -f <file>`.
+- Save with this exact dated filename: `competitor-[name]-[YYYY-MM-DD].md` (anywhere in the repo — the ignore rule keys off the date in the name, not the folder).
+- Saved that way, the file is git-ignored by default; drop the date and it is NOT protected. It can hold competitive detail you may not want public. To version a reviewed copy, use `git add -f <file>`.

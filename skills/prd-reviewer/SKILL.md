@@ -50,7 +50,7 @@ Apply checks 6-7 **only if the feature is AI-powered** — i.e. a model generate
 
 | # | Check | Verdict | Note |
 |---|-------|---------|------|
-| 1 | Hypothesis testable | PASS/FAIL | [one line] |
+| 1 | Hypothesis present and testable | PASS/FAIL | [one line] |
 | ... | ... | ... | ... |
 
 **Score:** [N] of [denominator] checks pass. The denominator is **5** for a non-AI PRD (checks 6-7 are N/A and excluded, not counted as fails) and **7** for an AI PRD.

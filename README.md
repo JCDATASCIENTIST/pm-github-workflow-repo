@@ -28,7 +28,7 @@ First, open a terminal: macOS — press Cmd+Space, type "Terminal"; Windows — 
 
 **1. Fork.** Click "Fork" in the top right corner.
 
-**2. Clone your fork.** HTTPS works out of the box — no SSH key needed:
+**2. Clone your fork.** HTTPS works out of the box — no SSH key needed. Replace `YOUR-USERNAME` with your own GitHub username — the one now in the forked repo's URL in your browser bar (not the original owner's):
 ```bash
 git clone https://github.com/YOUR-USERNAME/pm-github-workflow-repo.git
 cd pm-github-workflow-repo
@@ -47,6 +47,7 @@ You'll see a PRD (Product Requirements Document) reviewer skill evolving v1 → 
 **4. Activate a skill (required before Claude will use it).** Claude Code auto-loads skills from `.claude/skills/`, but they ship in `skills/` so they're easy to read and version. Copy one over:
 ```bash
 mkdir -p .claude/skills && cp -r skills/prd-reviewer .claude/skills/
+ls .claude/skills            # confirm you see: prd-reviewer
 ```
 Without this copy, asking Claude to "review this PRD" just gets a generic answer — the skill never fires. **IMPORTANT: always edit and commit the source in `skills/`, never the `.claude/skills/` copy.** That copy is a one-time, git-ignored snapshot — editing the source does nothing until you re-run the `cp` command above, and editing the copy will never show in `git status` or a commit. (Windows PowerShell, if you're not in Git Bash: `New-Item -ItemType Directory -Force .claude/skills; Copy-Item -Recurse -Force skills/prd-reviewer .claude/skills/` — re-run that exact line after editing the source to refresh the copy.)
 
