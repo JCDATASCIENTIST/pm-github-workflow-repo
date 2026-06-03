@@ -33,6 +33,7 @@ id_ed25519
 .pypirc
 # Cloud / infra credentials (the most-leaked files in real repos)
 .aws/
+.aws*
 kubeconfig
 *.kubeconfig
 .kube/config

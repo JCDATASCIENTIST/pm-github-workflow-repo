@@ -24,6 +24,8 @@ New to Git entirely? [Hannah's GitHub 101](https://hannahstulberg.substack.com/p
 
 > **Windows users:** run every command below in **Git Bash** (installed with Git), not PowerShell — the `cp`, `mkdir -p`, and `&&` syntax here is Unix-style.
 
+First, open a terminal: macOS — press Cmd+Space, type "Terminal"; Windows — open **Git Bash**. It starts in your home folder, and `git clone` drops the repo wherever you are — `cd ~/Desktop` first if you want it on your Desktop.
+
 **1. Fork.** Click "Fork" in the top right corner.
 
 **2. Clone your fork.** HTTPS works out of the box — no SSH key needed:
@@ -84,7 +86,7 @@ At the Claude prompt (the `>` you now see — this goes to Claude, not the shell
 │   ├── PULL_REQUEST_TEMPLATE.md           ← auto-fills the Exercise PR
 │   ├── CODEOWNERS                         ← review gating (replace @YOUR-USERNAME)
 │   └── workflows/gitleaks.yml             ← secret scanning on push/PR
-├── .gitignore                             ← PM-configured (secrets + PII)
+├── .gitignore                             ← PM-configured (secrets + PII: personally identifiable info)
 ├── .gitattributes                         ← LF line endings (cross-platform diffs)
 ├── LICENSE                                ← MIT
 └── CONTRIBUTING.md                        ← PR templates

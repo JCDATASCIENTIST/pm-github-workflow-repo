@@ -18,7 +18,7 @@ When you wake up, the git log *is* the experiment log.
 git log --oneline -- autoresearch/launch-announcement-writer.md
 ```
 
-(Scoped to the prompt file, so you see exactly the six optimization rounds — not the later doc edits that also touched this folder.) You'll see the rounds, newest first (commit hashes on the left will differ in your fork — read the messages):
+(Scoped to the prompt file, so you see exactly the seed plus five optimization rounds — not the later doc edits that also touched this folder.) You'll see them newest first (commit hashes on the left will differ in your fork — read the messages):
 
 ```
 round 5 - revert word-count cap (82% -> 90%, restored best)

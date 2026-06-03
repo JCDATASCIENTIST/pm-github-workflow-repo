@@ -2,8 +2,8 @@
 
 **Feature:** Natural-language scheduling ("book 30 min with Sarah next week")
 **Owner:** Jake Torres (Calendar PM)
-**Last reviewed:** 2026-04-13
-**Baseline:** 0.72 (first run, 20 requests, 2026-04-13)
+**Last reviewed:** 2026-04-10
+**Baseline:** 0.72 (first run, 20 requests, 2026-04-10)
 **Target:** 0.85 (before rollout to 10%)
 **Kill threshold:** below 0.60, pause rollout
 
@@ -11,7 +11,7 @@ This is the eval referenced by `examples/project-level-claude-md.md`. It scores 
 
 Scope decision: Google Calendar only in v1 (Outlook is out) — see `decisions/decision-2026-04-10-google-calendar-only-v1.md`.
 
-## Criteria (4 binary questions)
+## Criteria (4 binary questions; 1-2 apply to every request, 3-4 are conditional on request type — so each input scores out of 3 or 4, see How to Run)
 
 ### 1. Picks a slot that is actually free for all attendees
 
