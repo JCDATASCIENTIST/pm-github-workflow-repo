@@ -25,11 +25,11 @@ Analyze provided user feedback and produce a structured synthesis. Works with in
 ### Top Themes (ranked by signal strength)
 
 #### Theme 1: [3-5 word name]
-- **Signal:** [X] / [total] mentioned — severity: [low/medium/high/critical]
+- **Signal:** [X] / [total] mentioned - severity: [low/medium/high/critical]
 - **Summary:** [2-3 sentences]
 - **Quotes:**
-  - "[exact quote]" — [source identifier]
-  - "[exact quote]" — [source identifier]
+  - "[exact quote]" - [source identifier]
+  - "[exact quote]" - [source identifier]
 - **Implication:** [one sentence]
 
 ### What to Build
@@ -42,12 +42,12 @@ Analyze provided user feedback and produce a structured synthesis. Works with in
 [What needs validation. Specific next steps.]
 
 ### Quote Bank
-[Up to 15-20 strongest quotes by theme, copy-paste ready for PRDs. Fewer is fine for small inputs — never pad or invent to hit a count.]
+[Up to 15-20 strongest quotes by theme, copy-paste ready for PRDs. Fewer is fine for small inputs - never pad or invent to hit a count.]
 ```
 
 ## Good vs Bad Output
 
-GOOD: "Onboarding friction — 6/8 sources, high severity. 'I gave up at the API-key step.' — Ticket #4412."
+GOOD: "Onboarding friction - 6/8 sources, high severity. 'I gave up at the API-key step.' - Ticket #4412."
 BAD: "Several users found onboarding confusing." (no count, no severity, no verbatim quote, no source)
 
 ## Edge Cases
@@ -59,5 +59,5 @@ BAD: "Several users found onboarding confusing." (no count, no severity, no verb
 ## Rules
 - Never invent quotes. Every quote must come verbatim from sources.
 - Count honestly. 1/8 is "1/8," not "several."
-- Save with this exact dated filename: `feedback-synthesis-[YYYY-MM-DD].md` (anywhere in the repo — the ignore rule keys off the date in the name, not the folder).
+- Save with this exact dated filename: `feedback-synthesis-[YYYY-MM-DD].md` (anywhere in the repo - the ignore rule keys off the date in the name, not the folder).
 - Saved that way, the file is git-ignored by default; drop the date and it is NOT protected. It holds verbatim customer quotes / PII (personally identifiable information). To version a sanitized copy, use `git add -f <file>`.

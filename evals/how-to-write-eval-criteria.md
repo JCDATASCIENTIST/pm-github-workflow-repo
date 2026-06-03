@@ -34,7 +34,7 @@ Fewer than 3: too coarse. More than 6: the model games the checklist.
 
 ## Step 5: Test on 20+ Inputs
 
-20 is a floor — use more for higher-variance tasks (the launch-announcement run in `autoresearch/` uses 25). If everything passes, criteria are too easy. If everything fails, too strict.
+20 is a floor - use more for higher-variance tasks (the launch-announcement run in `autoresearch/` uses 25). If everything passes, criteria are too easy. If everything fails, too strict.
 
 ## Template
 

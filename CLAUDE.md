@@ -34,6 +34,6 @@ file every session. See examples/claude-md-filled-example.md for a completed ver
 - CLIs: GitHub CLI, [OTHERS]
 
 ---
-*Keep this file under 200 lines. Monthly, review what changed and prune: `git log -p -- CLAUDE.md` (or `git diff HEAD~20 -- CLAUDE.md` once you have 20+ commits — it errors on younger repos).*
-*Project-specific context goes in project-level CLAUDE.md files, not here (the calendar PR rule that briefly lived here is the example — see the prune commit).*
+*Keep this file under 200 lines. Monthly, review what changed and prune: `git log -p -- CLAUDE.md` (or `git diff HEAD~20 -- CLAUDE.md` once you have 20+ commits - it errors on younger repos).*
+*Project-specific context goes in project-level CLAUDE.md files, not here (the calendar PR rule that briefly lived here is the example - see the prune commit).*
 *On-demand instructions go in skill files, not here.*

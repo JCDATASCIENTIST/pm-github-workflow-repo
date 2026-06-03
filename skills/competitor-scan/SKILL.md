@@ -30,10 +30,10 @@ Research the specified competitor. Use web search for current information. Focus
 - Pricing: [exact tiers and prices, or "not public" if unavailable]
 
 ### Strengths (3-5, evidence-backed)
-1. [Strength] — Evidence: [specific review, metric, or feature]
+1. [Strength] - Evidence: [specific review, metric, or feature]
 
 ### Weaknesses (3-5, evidence-backed)
-1. [Weakness] — Evidence: [specific complaint, missing feature]
+1. [Weakness] - Evidence: [specific complaint, missing feature]
 
 ### User Sentiment
 - G2 rating: [X.X/5, N reviews]
@@ -61,5 +61,5 @@ BAD: "They're pretty expensive and people seem to like them." (no source, no num
 ## Rules
 - Cite every claim with a URL.
 - Use actual pricing from the pricing page, not from blog posts.
-- Save with this exact dated filename: `competitor-[name]-[YYYY-MM-DD].md` (anywhere in the repo — the ignore rule keys off the date in the name, not the folder).
+- Save with this exact dated filename: `competitor-[name]-[YYYY-MM-DD].md` (anywhere in the repo - the ignore rule keys off the date in the name, not the folder).
 - Saved that way, the file is git-ignored by default; drop the date and it is NOT protected. It can hold competitive detail you may not want public. To version a reviewed copy, use `git add -f <file>`.

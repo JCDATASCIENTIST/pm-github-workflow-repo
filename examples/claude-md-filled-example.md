@@ -38,11 +38,11 @@
 - CLIs: GitHub CLI, Vercel CLI
 
 ## Key People
-> ⚠️ Real names + candid notes about colleagues belong in your **private** workspace repo only — never in a public or forked one. See `docs/which-repo-decision-guide.md`. (Names below are fictional.)
+> ⚠️ Real names + candid notes about colleagues belong in your **private** workspace repo only - never in a public or forked one. See `docs/which-repo-decision-guide.md`. (Names below are fictional.)
 - David Chen: Director of Eng. Values brevity. Hates vague timelines.
 - Sarah Kim: Head of Design. Cares about accessibility. Prefers async.
 - Marcus Rivera: VP Product (my manager). Wants metrics in every update.
 
 ---
 *Well under 200 lines. The Key People section helps Claude draft messages in the right register.*
-*To reuse: copy everything between the two `---` dividers above into your own `CLAUDE.md` — not this title or footer — and swap in your details.*
+*To reuse: copy everything between the two `---` dividers above into your own `CLAUDE.md` - not this title or footer - and swap in your details.*

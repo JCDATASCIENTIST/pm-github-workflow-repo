@@ -35,7 +35,7 @@ Fork and customize for your workflow. You can also contribute improvements back.
 
 ## Before You Enable Review Gating
 
-If you fork this for a team: edit `.github/CODEOWNERS` and replace `@YOUR-USERNAME` with real GitHub handles, then turn on branch protection (Settings → Branches → Require review from Code Owners). Until you do, CODEOWNERS is inert. The `.github/workflows/gitleaks.yml` secret scan runs automatically — but org-owned repos need a free `GITLEAKS_LICENSE` secret (see the comment in that file).
+If you fork this for a team: edit `.github/CODEOWNERS` and replace `@YOUR-USERNAME` with real GitHub handles, then turn on branch protection (Settings → Branches → Require review from Code Owners). Until you do, CODEOWNERS is inert. The `.github/workflows/gitleaks.yml` secret scan runs automatically - but org-owned repos need a free `GITLEAKS_LICENSE` secret (see the comment in that file).
 
 ## Review Criteria
 

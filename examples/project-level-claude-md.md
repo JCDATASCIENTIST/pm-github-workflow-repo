@@ -13,7 +13,7 @@
 - Engineer lead: Dana Wu (prefers detailed tickets with acceptance criteria)
 
 ## Technical Constraints
-- Google Calendar API only (no Outlook in v1) — see `decisions/decision-2026-04-10-google-calendar-only-v1.md`
+- Google Calendar API only (no Outlook in v1) - see `decisions/decision-2026-04-10-google-calendar-only-v1.md`
 - Rate limit: 10 requests/user/minute
 - Must work with existing OAuth flow
 - Store in UTC, display in user's local timezone
@@ -24,7 +24,7 @@
 - Target: 0.85 before rollout to 10%
 
 ## Rules (project-specific)
-- Tag @jake-torres on every PR and link this folder's PLANNING.md. (Lived in the global CLAUDE.md briefly, then pruned here — see that prune commit.)
+- Tag @jake-torres on every PR and link this folder's PLANNING.md. (Lived in the global CLAUDE.md briefly, then pruned here - see that prune commit.)
 - All API calls cached 5 minutes minimum
-- Tests use data/test-events.json — synthetic events only. Real attendee data is PII; keep it in data/exports/ (git-ignored), never in a commit.
+- Tests use data/test-events.json - synthetic events only. Real attendee data is PII; keep it in data/exports/ (git-ignored), never in a commit.
 - Screenshot every UI change for PR description

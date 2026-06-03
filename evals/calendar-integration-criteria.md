@@ -7,11 +7,11 @@
 **Target:** 0.85 (before rollout to 10%)
 **Kill threshold:** below 0.60, pause rollout
 
-This is the eval referenced by `examples/project-level-claude-md.md`. It scores the AI scheduling assistant's output offline, the same way `support-chatbot-criteria.md` does — versioned in git so a score drop can be diagnosed (criteria changed vs. model regressed).
+This is the eval referenced by `examples/project-level-claude-md.md`. It scores the AI scheduling assistant's output offline, the same way `support-chatbot-criteria.md` does - versioned in git so a score drop can be diagnosed (criteria changed vs. model regressed).
 
-Scope decision: Google Calendar only in v1 (Outlook is out) — see `decisions/decision-2026-04-10-google-calendar-only-v1.md`.
+Scope decision: Google Calendar only in v1 (Outlook is out) - see `decisions/decision-2026-04-10-google-calendar-only-v1.md`.
 
-## Criteria (4 binary questions; 1-2 apply to every request, 3-4 are conditional on request type — so each input scores out of 3 or 4, see How to Run)
+## Criteria (4 binary questions; 1-2 apply to every request, 3-4 are conditional on request type - so each input scores out of 3 or 4, see How to Run)
 
 ### 1. Picks a slot that is actually free for all attendees
 
@@ -36,7 +36,7 @@ Why: every extra turn is a reason to abandon and open the calendar manually.
 
 ### 4. Asks before acting when the request is ambiguous
 
-PASS: "Two Sarahs match — Sarah Kim or Sarah Lopez?"
+PASS: "Two Sarahs match - Sarah Kim or Sarah Lopez?"
 FAIL: silently books with the wrong Sarah.
 
 Why: a confident wrong booking is worse than a question.
@@ -45,9 +45,9 @@ Why: a confident wrong booking is worse than a question.
 
 1. Collect 20 real scheduling requests from beta logs.
 2. Run each through the assistant.
-3. Score each on criteria 1 and 2 (they apply to every request). Criteria 3 and 4 are conditional on the request type — score only the one that applies (3 for unambiguous requests, 4 for ambiguous ones) and mark the other N/A. N/A is excluded from that input's denominator; it is not a fail.
+3. Score each on criteria 1 and 2 (they apply to every request). Criteria 3 and 4 are conditional on the request type - score only the one that applies (3 for unambiguous requests, 4 for ambiguous ones) and mark the other N/A. N/A is excluded from that input's denominator; it is not a fail.
 4. Overall score = total points earned / total criteria scored (0.00 to 1.00).
 
 ## Revision Log
 
-Tracked in git — `git log --oneline -- evals/calendar-integration-criteria.md`. Review the first Monday of each month.
+Tracked in git - `git log --oneline -- evals/calendar-integration-criteria.md`. Review the first Monday of each month.

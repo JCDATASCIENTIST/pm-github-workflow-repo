@@ -1,6 +1,6 @@
 # PRD: Natural-Language Scheduling
 
-*A deliberately incomplete PRD — run the `prd-reviewer` skill on it and watch the checklist fire. It passes some checks and fails others on purpose.*
+*A deliberately incomplete PRD - run the `prd-reviewer` skill on it and watch the checklist fire. It passes some checks and fails others on purpose.*
 
 ---
 
@@ -22,9 +22,9 @@ Ship behind a flag to the internal dogfood group (employees testing before custo
 
 <!--
 On purpose, this PRD is MISSING:
-- Non-goals (no scope boundary — e.g. is Outlook in or out?)
+- Non-goals (no scope boundary - e.g. is Outlook in or out?)
 - Kill criteria (when do we roll back?)
 - A complete rollout plan with ramp gates (only "dogfood", no % gates)
 - For the AI feature: a behavior contract with examples, and eval criteria
-It PASSES checks 1 (testable hypothesis) and 2 (numeric metrics). Run prd-reviewer: 2 of 7 pass, verdict NOT READY (checks 3/4/5/6/7 fail — and a failing check 4 alone already forces NOT READY).
+It PASSES checks 1 (testable hypothesis) and 2 (numeric metrics). Run prd-reviewer: 2 of 7 pass, verdict NOT READY (checks 3/4/5/6/7 fail - and a failing check 4 alone already forces NOT READY).
 -->

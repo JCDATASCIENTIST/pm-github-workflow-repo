@@ -6,7 +6,7 @@ name: gitleaks
 # Personal/public repos: works as-is, no setup.
 # ORGANIZATION-owned repos: gitleaks-action requires a FREE license key. Get one
 # at gitleaks.io and add it as a repo secret named GITLEAKS_LICENSE, or the run
-# fails with a license error. (Most PMs trying this at work fork into an org —
+# fails with a license error. (Most PMs trying this at work fork into an org -
 # this is the step that bites them.)
 on:
   push:
