@@ -1,26 +1,28 @@
-<!-- TEMPLATE: replace every [BRACKETED] value with your own. Claude Code loads this
-file every session. See examples/claude-md-filled-example.md for a completed version. -->
 # CLAUDE.md
 
 ## Who I Am
-- Role: [YOUR ROLE]
-- Company: [YOUR COMPANY]
-- Product: [YOUR PRODUCT]
-- Team: [X] engineers, [X] designers
+- Name: Joel Castillo
+- Role: Data scientist & personal brand builder
+- Working style: solo/independent builder shipping with AI tooling
+- Stack I reach for: Next.js + Supabase, Vite + React, Python for data work
 
 ## How I Work
+- I vibe-code: Claude Code builds, Cursor edits — never mix the two on the same pass.
 - I prototype before I spec.
 - I write PLANNING.md in the project repo.
 - I commit skill changes only after testing on 3+ inputs.
+- Project repos live under ~/Documents/projectmanagement (not Downloads/Desktop).
 
 ## Voice
 - Direct. No filler. No "I'd be happy to help."
+- Bilingual content (EN/ES): show one language at a time via a toggle, never stacked together.
 - PRDs: hypothesis first, then metrics with thresholds.
 - Data analysis: show the method. Reproducibility matters.
 
 ## Current Focus
-- [PROJECT 1]: [one line]
-- [PROJECT 2]: [one line]
+- Signal OS: Next.js 14 + Supabase app, CRUD complete, ready for deploy.
+- DISURI Beauty: Vite + React storefront + Creative Studio, live at disuri-claude-skills.vercel.app.
+- ZimVie design system: shadcn system synced to claude.ai/design (navy / sky-blue brand).
 
 ## Rules
 - Never commit to GitHub without asking me first.
@@ -30,10 +32,10 @@ file every session. See examples/claude-md-filled-example.md for a completed ver
 
 ## Tools
 - Skills: see skills/ folder
-- MCPs: [YOUR MCPS]
-- CLIs: GitHub CLI, [OTHERS]
+- MCPs: Supabase, Vercel, PostHog (project "TheHUB"), Shopify, Figma, GitHub
+- CLIs: GitHub CLI, Vercel CLI
 
 ---
 *Keep this file under 200 lines. Monthly, review what changed and prune: `git log -p -- CLAUDE.md` (or `git diff HEAD~20 -- CLAUDE.md` once you have 20+ commits - it errors on younger repos).*
-*Project-specific context goes in project-level CLAUDE.md files, not here (the calendar PR rule that briefly lived here is the example - see the prune commit).*
+*Project-specific context goes in project-level CLAUDE.md files, not here.*
 *On-demand instructions go in skill files, not here.*
