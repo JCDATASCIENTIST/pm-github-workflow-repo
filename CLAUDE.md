@@ -7,6 +7,7 @@
 - Stack I reach for: Next.js + Supabase, Vite + React, Python for data work
 
 ## How I Work
+- My workflows follow the Product Growth Team OS (github.com/aakashg/product-growth-team-os): summaries first, decision logs, launch gates, PII-safe outputs, weekly synthesis. pm-brain/WORKFLOW.md is the working copy.
 - I vibe-code: Claude Code builds, Cursor edits — never mix the two on the same pass.
 - I prototype before I spec.
 - I write PLANNING.md in the project repo.
@@ -17,6 +18,7 @@
 - Direct. No filler. No "I'd be happy to help."
 - Bilingual content (EN/ES): show one language at a time via a toggle, never stacked together.
 - PRDs: hypothesis first, then metrics with thresholds.
+- Metrics language: always "KPI" (marketing verbiage), never "North Star metric."
 - Data analysis: show the method. Reproducibility matters.
 
 ## Current Focus
