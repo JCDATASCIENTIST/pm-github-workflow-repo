@@ -22,20 +22,22 @@
 - Data analysis: show the method. Reproducibility matters.
 
 ## Current Focus
+- pm-brain (~/Documents/projectmanagement/pm-brain): my daily working agent — Cursor SDK CLI + web app, 76-skill library, swappable per-company brains in contexts/. Render deploy pending GitHub push.
 - Signal OS: Next.js 14 + Supabase app, CRUD complete, ready for deploy.
-- DISURI Beauty: Vite + React storefront + Creative Studio, live at disuri-claude-skills.vercel.app.
+- DISURI Beauty: Vite + React storefront + Creative Studio, live at disuri-claude-skills.vercel.app. Brand/copy source of truth: obsidian-vault repo, 3-Resources/DISURI-Beauty-Knowledge-Base/.
 - ZimVie design system: shadcn system synced to claude.ai/design (navy / sky-blue brand).
 
 ## Rules
 - Never commit to GitHub without asking me first.
 - Never modify files in evals/ without confirming the change and reason.
 - Check skills/ folder when I reference a skill by name.
+- Pull business context from my GitHub repos (obsidian-vault, DISURIBeauty, etc.), not from memory of these rules.
 - Responses under 500 words unless I ask for depth.
 
 ## Tools
-- Skills: see skills/ folder
-- MCPs: Supabase, Vercel, PostHog (project "TheHUB"), Shopify, Figma, GitHub
-- CLIs: GitHub CLI, Vercel CLI
+- Skills: see skills/ folder (57 here; full 76-skill working library lives in pm-brain/skills/ with routing tie-breakers in pm-brain/WORKFLOW.md)
+- MCPs: Supabase, Vercel, PostHog (project "TheHUB"), Shopify, Figma, GitHub, MarkItDown (file→markdown, via pm-brain)
+- CLIs: GitHub CLI, Vercel CLI, Render (pending)
 
 ---
 *Keep this file under 200 lines. Monthly, review what changed and prune: `git log -p -- CLAUDE.md` (or `git diff HEAD~20 -- CLAUDE.md` once you have 20+ commits - it errors on younger repos).*
