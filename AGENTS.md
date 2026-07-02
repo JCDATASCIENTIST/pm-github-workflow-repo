@@ -8,6 +8,9 @@
 ## Learned Workspace Facts
 
 - The user's daily working agent app is pm-brain at `~/Documents/projectmanagement/pm-brain`: a Cursor SDK app (CLI `run.ts` + web server `server.ts`) run via `npm run brain -- <context> "<prompt>"`.
-- pm-brain layout: `contexts/<company>/` holds per-company brains (every `*.md` plus optional `mcp.json`); `skills/` is a 76-skill library (includes the deanpeters/Product-Manager-Skills pack, attributed in `PM-SKILLS-ATTRIBUTION.md`); `WORKFLOW.md` carries the Team OS operating rules and is loaded on every run.
+- pm-brain lives on GitHub at `JCDATASCIENTIST/pm-brain` (private) and is deployed live at pm-brain.onrender.com via the `render.yaml` blueprint; Render auto-deploys on every push to `main`.
+- pm-brain's web UI is a Vite + React app in `pm-brain/web/`; `server.ts` serves `web/dist` and handles multi-turn chat by resuming Cursor SDK agents (`Agent.resume` with an `agentId` on `POST /api/run`).
+- pm-brain layout: `contexts/<company>/` holds per-company brains (every `*.md` plus optional `mcp.json`); `skills/` is a 76-skill library from 4 sources with licenses tracked in `skills/PM-SKILLS-ATTRIBUTION.md` — the deanpeters and Team OS packs are CC BY-NC (non-commercial; remove before selling access to a deployment); `WORKFLOW.md` carries the Team OS operating rules and is loaded on every run.
+- Commits to this workflow repo go to the `my-customization` branch of the user's fork `JCDATASCIENTIST/pm-github-workflow-repo`.
 - The `JCDATASCIENTIST/DISURIBeauty` GitHub repo is a Shopify store ops repo (not Vite+React); its `AGENTS.md` carries the ops facts, and the obsidian-vault knowledge base is linked as a submodule at `reference/kb`.
 - CLAUDE.md is always loaded in this workspace; do not duplicate its rules here (e.g. the "KPI, never North Star metric" rule and the Product Growth Team OS workflow already live there).
